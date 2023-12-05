@@ -2,6 +2,7 @@
 #include "irq.h"
 #include "programa.h"
 #include "instrucao.h"
+#include "processos.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
@@ -14,6 +15,9 @@ struct so_t {
   mem_t *mem;
   console_t *console;
   relogio_t *relogio;
+
+  int processo_atual; // Se processo_atual = 0, entao nenhum processo esta sendo executado no momento
+  processo *tab_processos[10];
 };
 
 
@@ -25,6 +29,7 @@ static int so_carrega_programa(so_t *self, char *nome_do_executavel);
 static bool copia_str_da_mem(int tam, char str[tam], mem_t *mem, int ender);
 
 
+// Se processo_atual = 0, entao nenhum processo esta sendo executado.
 
 so_t *so_cria(cpu_t *cpu, mem_t *mem, console_t *console, relogio_t *relogio)
 {
