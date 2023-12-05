@@ -14,4 +14,5 @@ struct cpu_state
 struct processo
 {
     cpu_state* estado_cpu;
+    pr_state estado_processo;
 };
