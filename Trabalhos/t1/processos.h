@@ -32,5 +32,6 @@ struct processo
 };
 
 processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo);
+void mata_processo(processo* processo);
 
 #endif

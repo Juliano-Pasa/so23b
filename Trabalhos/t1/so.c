@@ -177,7 +177,7 @@ static void so_despacha(so_t *self)
 
   // Esse é o codigo que deve ser executado assim que tudo estiver funcionando
   // Por enquanto manter comentado
-  /*
+  
   processo* process = self->tab_processos[self->processo_atual];
 
   mem_escreve(self->mem, IRQ_END_PC, process->estado_cpu->PC);
@@ -186,7 +186,6 @@ static void so_despacha(so_t *self)
   mem_escreve(self->mem, IRQ_END_erro, process->estado_cpu->erro);
   mem_escreve(self->mem, IRQ_END_complemento, process->estado_cpu->complemento);
   mem_escreve(self->mem, IRQ_END_PC, process->estado_cpu->PC);
-  */
 }
 
 static err_t so_trata_irq(so_t *self, int irq)
@@ -287,8 +286,7 @@ static err_t so_trata_chamada_sistema(so_t *self)
 {
   // com processos, a identificação da chamada está no reg A no descritor
   //   do processo
-  int id_chamada;
-  mem_le(self->mem, IRQ_END_A, &id_chamada);
+  int id_chamada = (self->tab_processos[self->processo_atual])->estado_cpu->A;
   console_printf(self->console,
       "SO: chamada de sistema %d", id_chamada);
   switch (id_chamada) {
@@ -369,24 +367,19 @@ static void so_chamada_cria_proc(so_t *self)
 
   // Encontra posicao na tabela de processos para colocar novo processo
   int posicao_processo = 0;
-  while (posicao_processo < TAMANHO_TABELA && self->tab_processos[posicao_processo] == NULL) posicao_processo++;
+  while (posicao_processo < TAMANHO_TABELA && self->tab_processos[posicao_processo] != NULL) posicao_processo++;
   if (posicao_processo == TAMANHO_TABELA) return;
-
-  //console_printf(self->console, "Endereco no registrador %d", );
 
   // em X está o endereço onde está o nome do arquivo
   int ender_proc = process->estado_cpu->X;
   // deveria ler o X do descritor do processo criador
-  if (true) {
-    char nome[100];
-    if (copia_str_da_mem(100, nome, self->mem, ender_proc)) {
-      int ender_carga = so_carrega_programa(self, nome);
-      if (ender_carga > 0) {
-        self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario);
-        // deveria escrever no PC do descritor do processo criado
-        mem_escreve(self->mem, IRQ_END_PC, ender_carga); // Essa linha vai ser removida em algum momento
-        return;
-      }
+  char nome[100];
+  if (copia_str_da_mem(100, nome, self->mem, ender_proc)) {
+    int ender_carga = so_carrega_programa(self, nome);
+    if (ender_carga > 0) {
+      self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario);
+      // deveria escrever no PC do descritor do processo criado
+      return;
     }
   }
   // deveria escrever -1 (se erro) ou o PID do processo criado (se OK) no reg A
@@ -396,9 +389,9 @@ static void so_chamada_cria_proc(so_t *self)
 
 static void so_chamada_mata_proc(so_t *self)
 {
-  // ainda sem suporte a processos, retorna erro -1
-  console_printf(self->console, "SO: SO_MATA_PROC não implementada");
-  mem_escreve(self->mem, IRQ_END_A, -1);
+  mata_processo(self->tab_processos[self->processo_atual]);
+  self->tab_processos[self->processo_atual] = NULL;
+  self->processo_atual = -1;
 }
 
 

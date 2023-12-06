@@ -16,3 +16,9 @@ processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_m
 
     return process;
 }
+
+void mata_processo(processo* processo)
+{
+    free(processo->estado_cpu);
+    free(processo);
+}
