@@ -154,8 +154,26 @@ static void so_trata_pendencias(so_t *self)
 }
 static void so_escalona(so_t *self)
 {
-  // escolhe o próximo processo a executar, que passa a ser o processo
-  //   corrente; pode continuar sendo o mesmo de antes ou não
+  int menorPid = self->pid_atual + 1;
+  int indexMenorPid = -1;
+
+  for (int i = 0; i < TAMANHO_TABELA; i++)
+  {
+    if (self->tab_processos[i] == NULL) continue;
+    if ((self->tab_processos[i])->estado_processo == BLOCKED) continue;
+    if (self->tab_processos[i]->pid < menorPid)
+    {
+      menorPid = self->tab_processos[i]->pid;
+      indexMenorPid = i;
+    }
+  }
+
+  if (indexMenorPid == -1)
+  {
+    return;
+  }
+
+  self->processo_atual = indexMenorPid;
 }
 static void so_despacha(so_t *self)
 {
@@ -208,6 +226,11 @@ static err_t so_trata_irq_reset(so_t *self)
 
   self->pid_atual = 1;
   self->processo_atual = 0;
+  for (int i = 0; i < TAMANHO_TABELA; i++)
+  {
+    self->tab_processos[i] = NULL;
+  }
+
   self->tab_processos[self->processo_atual] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual);
   processo* process = self->tab_processos[self->processo_atual];
 
@@ -259,6 +282,7 @@ static void so_chamada_le(so_t *self);
 static void so_chamada_escr(so_t *self);
 static void so_chamada_cria_proc(so_t *self);
 static void so_chamada_mata_proc(so_t *self);
+static void so_chamada_espera_proc(so_t *self);
 
 static err_t so_trata_chamada_sistema(so_t *self)
 {
@@ -277,6 +301,9 @@ static err_t so_trata_chamada_sistema(so_t *self)
       break;
     case SO_MATA_PROC:
       so_chamada_mata_proc(self);
+      break;
+    case SO_ESPERA_PROC:
+      so_chamada_espera_proc(self);
       break;
     default:
       console_printf(self->console,
@@ -383,6 +410,23 @@ static void so_chamada_mata_proc(so_t *self)
   self->tab_processos[i] = NULL;
 
   process->estado_cpu->A = 0;
+}
+static void so_chamada_espera_proc(so_t *self)
+{
+  processo* process = self->tab_processos[self->processo_atual];
+
+  int i = 0;
+  while (i < TAMANHO_TABELA && (self->tab_processos[i])->pid != process->estado_cpu->X) i++;
+  
+  // Coloca o processo em estado de erro caso o processo a ser esperado nao exista
+  if (i == TAMANHO_TABELA)
+  {
+    process->estado_cpu->A = -1;
+    return;
+  }
+  
+  process->estado_cpu->A = 0;
+  process->estado_processo = BLOCKED;
 }
 
 
