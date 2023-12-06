@@ -18,6 +18,7 @@ struct so_t {
   console_t *console;
   relogio_t *relogio;
 
+  int pid_atual;
   int processo_atual; // Se processo_atual = -1, entao nenhum processo esta sendo executado no momento
   processo* tab_processos[TAMANHO_TABELA];
 };
@@ -43,6 +44,7 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, console_t *console, relogio_t *relogio)
   self->console = console;
   self->relogio = relogio;
 
+  self->pid_atual = 1;
   self->processo_atual = -1;
   for (int i = 0; i < TAMANHO_TABELA; i++)
   {
@@ -121,18 +123,10 @@ static err_t so_trata_interrupcao(void *argC, int reg_A)
 
 static void so_salva_estado_da_cpu(so_t *self)
 {
-  // se não houver processo corrente, não faz nada
   if (self->processo_atual == -1)
   {
     return;
   }
-  
-  // salva os registradores que compõem o estado da cpu no descritor do
-  //   processo corrente
-  // mem_le(self->mem, IRQ_END_A, endereco onde vai o A no descritor);
-  // mem_le(self->mem, IRQ_END_X, endereco onde vai o X no descritor);
-  // etc
-
   processo* process = self->tab_processos[self->processo_atual];
 
   mem_le(self->mem, IRQ_END_PC, &(process->estado_cpu->PC));
@@ -165,18 +159,11 @@ static void so_escalona(so_t *self)
 }
 static void so_despacha(so_t *self)
 {
-  // se não houver processo corrente, coloca ERR_CPU_PARADA em IRQ_END_erro
   if (self->processo_atual == -1)
   {
     mem_escreve(self->mem, IRQ_END_erro, ERR_CPU_PARADA);
     return;
   }
-
-  // se houver processo corrente, coloca todo o estado desse processo em
-  //   IRQ_END_*
-
-  // Esse é o codigo que deve ser executado assim que tudo estiver funcionando
-  // Por enquanto manter comentado
   
   processo* process = self->tab_processos[self->processo_atual];
 
@@ -213,27 +200,18 @@ static err_t so_trata_irq(so_t *self, int irq)
 
 static err_t so_trata_irq_reset(so_t *self)
 {
-  // coloca um programa na memória
   int ender = so_carrega_programa(self, "init.maq");
   if (ender != 100) {
     console_printf(self->console, "SO: problema na carga do programa inicial");
     return ERR_CPU_PARADA;
   }
 
+  self->pid_atual = 1;
   self->processo_atual = 0;
-  self->tab_processos[0] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario);
-  processo* process = self->tab_processos[0];
+  self->tab_processos[self->processo_atual] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual);
+  processo* process = self->tab_processos[self->processo_atual];
 
-  // deveria criar um processo para o init, e inicializar o estado do
-  //   processador para esse processo com os registradores zerados, exceto
-  //   o PC e o modo.
-  // como não tem suporte a processos, está carregando os valores dos
-  //   registradores diretamente para a memória, de onde a CPU vai carregar
-  //   para os seus registradores quando executar a instrução RETI
-
-  // altera o PC para o endereço de carga (deve ter sido 100)
   mem_escreve(self->mem, IRQ_END_PC, process->estado_cpu->PC);
-  // passa o processador para modo usuário
   mem_escreve(self->mem, IRQ_END_modo, process->estado_cpu->modo);
   return ERR_OK;
 }
@@ -284,8 +262,6 @@ static void so_chamada_mata_proc(so_t *self);
 
 static err_t so_trata_chamada_sistema(so_t *self)
 {
-  // com processos, a identificação da chamada está no reg A no descritor
-  //   do processo
   int id_chamada = (self->tab_processos[self->processo_atual])->estado_cpu->A;
   console_printf(self->console,
       "SO: chamada de sistema %d", id_chamada);
@@ -360,9 +336,7 @@ static void so_chamada_escr(so_t *self)
 
 static void so_chamada_cria_proc(so_t *self)
 {
-  // ainda sem suporte a processos, carrega programa e passa a executar ele
-  // quem chamou o sistema não vai mais ser executado, coitado!
-
+  self->pid_atual++;
   processo* process = self->tab_processos[self->processo_atual];
 
   // Encontra posicao na tabela de processos para colocar novo processo
@@ -372,26 +346,43 @@ static void so_chamada_cria_proc(so_t *self)
 
   // em X está o endereço onde está o nome do arquivo
   int ender_proc = process->estado_cpu->X;
-  // deveria ler o X do descritor do processo criador
   char nome[100];
   if (copia_str_da_mem(100, nome, self->mem, ender_proc)) {
     int ender_carga = so_carrega_programa(self, nome);
     if (ender_carga > 0) {
-      self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario);
-      // deveria escrever no PC do descritor do processo criado
+      self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual);
+      process->estado_cpu->A = self->pid_atual;
       return;
     }
   }
-  // deveria escrever -1 (se erro) ou o PID do processo criado (se OK) no reg A
-  //   do processo que pediu a criação
-  mem_escreve(self->mem, IRQ_END_A, -1);
+  
+  process->estado_cpu->A = -1;
 }
 
 static void so_chamada_mata_proc(so_t *self)
 {
-  mata_processo(self->tab_processos[self->processo_atual]);
-  self->tab_processos[self->processo_atual] = NULL;
-  self->processo_atual = -1;
+  processo* process = self->tab_processos[self->processo_atual];
+
+
+  // Isso aq eu acho q tem q fazer diferente
+  // Se tu olhar em so.h, o processo pode se matar, só q se ele se matar
+  // vai dar segfault nas proximas etapas
+  if (process->estado_cpu->X == 0)
+  {
+    mata_processo(self->tab_processos[self->processo_atual]);
+    self->tab_processos[self->processo_atual] = NULL;
+    self->processo_atual = -1;
+    return;
+  }
+
+  int i = 0;
+  while (i < TAMANHO_TABELA && (self->tab_processos[i])->pid != process->estado_cpu->X) i++;
+  if (i == TAMANHO_TABELA) return;
+
+  mata_processo(self->tab_processos[i]);
+  self->tab_processos[i] = NULL;
+
+  process->estado_cpu->A = 0;
 }
 
 

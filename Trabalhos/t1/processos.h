@@ -7,6 +7,7 @@
 typedef enum
 {
     INVALID,
+    READY,
     RUNNING,
     BLOCKED
 } pr_state;
@@ -28,10 +29,10 @@ struct processo
 {
     cpu_state* estado_cpu;
     pr_state estado_processo;
-    char c;
+    int pid;
 };
 
-processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo);
+processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid);
 void mata_processo(processo* processo);
 
 #endif
