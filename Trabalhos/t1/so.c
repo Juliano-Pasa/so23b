@@ -6,6 +6,7 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 // intervalo entre interrupções do relógio
 #define INTERVALO_INTERRUPCAO 50   // em instruções executadas
@@ -16,8 +17,8 @@ struct so_t {
   console_t *console;
   relogio_t *relogio;
 
-  int processo_atual; // Se processo_atual = 0, entao nenhum processo esta sendo executado no momento
-  processo *tab_processos[10];
+  int processo_atual; // Se processo_atual = -1, entao nenhum processo esta sendo executado no momento
+  processo* tab_processos[10];
 };
 
 
@@ -172,6 +173,9 @@ static err_t so_trata_irq_reset(so_t *self)
     return ERR_CPU_PARADA;
   }
 
+  self->processo_atual = 0;
+  self->tab_processos[0] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario);
+
   // deveria criar um processo para o init, e inicializar o estado do
   //   processador para esse processo com os registradores zerados, exceto
   //   o PC e o modo.
@@ -180,9 +184,9 @@ static err_t so_trata_irq_reset(so_t *self)
   //   para os seus registradores quando executar a instrução RETI
 
   // altera o PC para o endereço de carga (deve ter sido 100)
-  mem_escreve(self->mem, IRQ_END_PC, ender);
+  mem_escreve(self->mem, IRQ_END_PC, self->tab_processos[self->processo_atual]->estado_cpu->PC);
   // passa o processador para modo usuário
-  mem_escreve(self->mem, IRQ_END_modo, usuario);
+  mem_escreve(self->mem, IRQ_END_modo, self->tab_processos[self->processo_atual]->estado_cpu->modo);
   return ERR_OK;
 }
 
