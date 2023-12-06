@@ -160,7 +160,7 @@ static void so_escalona(so_t *self)
   for (int i = 0; i < TAMANHO_TABELA; i++)
   {
     if (self->tab_processos[i] == NULL) continue;
-    if ((self->tab_processos[i])->estado_processo == BLOCKED) continue;
+    if ((self->tab_processos[i])->estado_processo != READY) continue;
     if (self->tab_processos[i]->pid < menorPid)
     {
       menorPid = self->tab_processos[i]->pid;
@@ -168,11 +168,13 @@ static void so_escalona(so_t *self)
     }
   }
 
+  // significa q ele nao achou nenhum processo pronto para ser executado
   if (indexMenorPid == -1)
   {
     return;
   }
 
+  
   self->processo_atual = indexMenorPid;
 }
 static void so_despacha(so_t *self)
@@ -287,6 +289,7 @@ static void so_chamada_espera_proc(so_t *self);
 static err_t so_trata_chamada_sistema(so_t *self)
 {
   int id_chamada = (self->tab_processos[self->processo_atual])->estado_cpu->A;
+  
   console_printf(self->console,
       "SO: chamada de sistema %d", id_chamada);
   switch (id_chamada) {
@@ -421,12 +424,13 @@ static void so_chamada_espera_proc(so_t *self)
   // Coloca o processo em estado de erro caso o processo a ser esperado nao exista
   if (i == TAMANHO_TABELA)
   {
-    process->estado_cpu->A = -1;
+    process->estado_cpu->A = -1; // Isso aqui era pra dar erro, mas nao ta acontecendo
     return;
   }
   
   process->estado_cpu->A = 0;
-  process->estado_processo = BLOCKED;
+  process->estado_processo = BLOCKED; // O estado desse processo provalvemente vai ter q ser WAITING, em vez de bloqueado
+  // Para os processos em espera, verificar o estado_cpu->X dele, e ver se tem algum processo com esse pid em execucao
 }
 
 
