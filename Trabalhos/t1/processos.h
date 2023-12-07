@@ -31,9 +31,10 @@ struct processo
     cpu_state* estado_cpu;
     pr_state estado_processo;
     int pid;
+    int terminal;
 };
 
-processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid);
+processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid, int terminal);
 void mata_processo(processo* processo);
 
 #endif

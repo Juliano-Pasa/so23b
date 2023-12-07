@@ -11,6 +11,7 @@
 // intervalo entre interrupções do relógio
 #define INTERVALO_INTERRUPCAO 50   // em instruções executadas
 #define TAMANHO_TABELA 10
+#define TOTAL_TERMINAIS 4
 
 struct so_t {
   cpu_t *cpu;
@@ -21,6 +22,8 @@ struct so_t {
   int pid_atual;
   int processo_atual; // Se processo_atual = -1, entao nenhum processo esta sendo executado no momento
   processo* tab_processos[TAMANHO_TABELA];
+
+  int uso_terminais[TOTAL_TERMINAIS];
 };
 
 
@@ -35,6 +38,7 @@ static bool copia_str_da_mem(int tam, char str[tam], mem_t *mem, int ender);
 static void reseta_processos(so_t *self);
 static void libera_espera(so_t *self, processo* process);
 static processo* busca_processo(so_t *self, int pid);
+static int encontra_terminal_livre(so_t *self);
 
 
 // Se processo_atual = 0, entao nenhum processo esta sendo executado.
@@ -173,13 +177,6 @@ static void so_escalona(so_t *self)
       indexMenorPid = i;
     }
   }
-
-  // significa q ele nao achou nenhum processo pronto para ser executado
-  if (indexMenorPid == -1)
-  {
-    return;
-  }
-
   
   self->processo_atual = indexMenorPid;
 }
@@ -235,11 +232,16 @@ static err_t so_trata_irq_reset(so_t *self)
   reseta_processos(self);
   self->processo_atual = 0;
 
-  self->tab_processos[self->processo_atual] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual);
+  int terminal = encontra_terminal_livre(self);
+
+  self->tab_processos[self->processo_atual] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal);
   processo* process = self->tab_processos[self->processo_atual];
+  (self->uso_terminais[terminal])++;
 
   mem_escreve(self->mem, IRQ_END_PC, process->estado_cpu->PC);
   mem_escreve(self->mem, IRQ_END_modo, process->estado_cpu->modo);
+
+  
   return ERR_OK;
 }
 
@@ -328,9 +330,25 @@ static void so_chamada_le(so_t *self)
   //   o caso
   // implementação lendo direto do terminal A
   //   deveria usar dispositivo corrente de entrada do processo
+
+  processo* process = self->tab_processos[self->processo_atual];
+  int terminal_inicio = process->terminal * 4;
+
+  // int estado;
+  // term_le(self->console, 1, &estado);
+
+  // if (estado == 0)
+  // {
+  //   process->estado_processo = BLOCKED;
+  //   self->processo_atual = -1;
+  //   return;
+  // }
+
+  // term_le(self->console, 0, &(process->estado_cpu->A));
+
   for (;;) {
     int estado;
-    term_le(self->console, 1, &estado);
+    term_le(self->console, terminal_inicio + 1, &estado);
     if (estado != 0) break;
     // como não está saindo do SO, o laço do processador não tá rodando
     // esta gambiarra faz o console andar
@@ -340,7 +358,7 @@ static void so_chamada_le(so_t *self)
     console_atualiza(self->console);
   }
   int dado;
-  term_le(self->console, 0, &dado);
+  term_le(self->console, terminal_inicio, &dado);
   // com processo, deveria escrever no reg A do processo
   mem_escreve(self->mem, IRQ_END_A, dado);
 }
@@ -351,9 +369,26 @@ static void so_chamada_escr(so_t *self)
   //   deveria bloquear o processo se dispositivo ocupado
   // implementação escrevendo direto do terminal A
   //   deveria usar dispositivo corrente de saída do processo
+
+  processo* process = self->tab_processos[self->processo_atual];
+  int terminal_inicio = process->terminal * 4;
+
+  // int estado;
+  // term_le(self->console, 3, &estado);
+  
+  // if (estado == 0)
+  // {
+  //   process->estado_processo = BLOCKED;
+  //   self->processo_atual = 1;
+  //   return;
+  // }
+
+  // term_escr(self->console, 2, process->estado_cpu->X);
+  // process->estado_cpu->A = 0;
+
   for (;;) {
     int estado;
-    term_le(self->console, 3, &estado);
+    term_le(self->console, terminal_inicio + 3, &estado);
     if (estado != 0) break;
     // como não está saindo do SO, o laço do processador não tá rodando
     // esta gambiarra faz o console andar
@@ -362,7 +397,7 @@ static void so_chamada_escr(so_t *self)
   }
   int dado;
   mem_le(self->mem, IRQ_END_X, &dado);
-  term_escr(self->console, 2, dado);
+  term_escr(self->console, terminal_inicio + 2, dado);
   mem_escreve(self->mem, IRQ_END_A, 0);
 }
 
@@ -382,8 +417,12 @@ static void so_chamada_cria_proc(so_t *self)
   if (copia_str_da_mem(100, nome, self->mem, ender_proc)) {
     int ender_carga = so_carrega_programa(self, nome);
     if (ender_carga > 0) {
-      self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual);
+      int terminal = encontra_terminal_livre(self);
+      (self->uso_terminais[terminal])++;
+
+      self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal);
       process->estado_cpu->A = self->pid_atual;
+
       return;
     }
   }
@@ -401,6 +440,8 @@ static void so_chamada_mata_proc(so_t *self)
   // vai dar segfault nas proximas etapas
   if (process->estado_cpu->X == 0)
   {
+    (self->uso_terminais[process->terminal])--;
+
     mata_processo(self->tab_processos[self->processo_atual]);
     self->tab_processos[self->processo_atual] = NULL;
     self->processo_atual = -1;
@@ -411,6 +452,7 @@ static void so_chamada_mata_proc(so_t *self)
   while (i < TAMANHO_TABELA && (self->tab_processos[i])->pid != process->estado_cpu->X) i++;
   if (i == TAMANHO_TABELA) return;
 
+  (self->uso_terminais[(self->tab_processos[i])->terminal])--;
   mata_processo(self->tab_processos[i]);
   self->tab_processos[i] = NULL;
 
@@ -495,6 +537,10 @@ static void reseta_processos(so_t *self)
   {
     self->tab_processos[i] = NULL;
   }
+  for(int i = 0; i < TOTAL_TERMINAIS; i++)
+  {
+    self->uso_terminais[i] = 0;
+  }
 }
 
 static void libera_espera(so_t *self, processo* process)
@@ -517,3 +563,20 @@ static processo* busca_processo(so_t *self, int pid)
 
   return NULL;
 }
+
+static int encontra_terminal_livre(so_t *self)
+{
+  int menor = self->uso_terminais[0];
+  int idMenor = 0;
+  for (int i = 1; i < TOTAL_TERMINAIS; i++)
+  {
+    if (self->uso_terminais[i] < menor)
+    {
+      idMenor = i;
+      menor = self->uso_terminais[i];
+    }
+  }
+
+  return idMenor;
+}
+
