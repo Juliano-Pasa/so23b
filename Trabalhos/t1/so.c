@@ -247,21 +247,33 @@ static err_t so_trata_irq_reset(so_t *self)
   return ERR_OK;
 }
 
+// NAO ESTOU TRATANDO NADA!
+// Isso aqui eh na magia thiago, nao sei oq q era pra ser feito.
+// No momento eu so to matando o processo que causou a interrupcao,
+// nao to nem tratando o erro que foi gerado.
+// Tambem to retornando como ERR_OK, pois acredito que se o processo
+// foi morto, a principio a CPU pode rodar sem problemas agora.
 static err_t so_trata_irq_err_cpu(so_t *self)
 {
   // Ocorreu um erro interno na CPU
   // O erro está codificado em IRQ_END_erro
   // Em geral, causa a morte do processo que causou o erro
   // Ainda não temos processos, causa a parada da CPU
-  int err_int;
   // com suporte a processos, deveria pegar o valor do registrador erro
   //   no descritor do processo corrente, e reagir de acordo com esse erro
   //   (em geral, matando o processo)
-  mem_le(self->mem, IRQ_END_erro, &err_int);
-  err_t err = err_int;
+
+  processo* process = self->tab_processos[self->processo_atual];
+  err_t err = process->estado_cpu->erro;
   console_printf(self->console,
-      "SO: IRQ não tratada -- erro na CPU: %s", err_nome(err));
-  return ERR_CPU_PARADA;
+      "SO: Erro na CPU: %s", err_nome(err));
+
+  (self->uso_terminais[process->terminal])--;
+  mata_processo(process);
+  self->tab_processos[self->processo_atual] = NULL;
+  self->processo_atual = -1;
+
+  return ERR_OK;
 }
 
 static err_t so_trata_irq_relogio(so_t *self)
@@ -351,7 +363,7 @@ static void so_chamada_escr(so_t *self)
   
   if (estado == 0)
   {
-    console_printf(self->console, "Processo atual bloqueado escrita %d", process->pid);
+    console_printf(self->console, "Processo %d bloqueado para escrita", process->pid);
     process->estado_processo = BLOCKED;
     process->estado_cpu->A = -1;
     self->processo_atual = -1;
@@ -395,10 +407,6 @@ static void so_chamada_mata_proc(so_t *self)
 {
   processo* process = self->tab_processos[self->processo_atual];
 
-
-  // Isso aq eu acho q tem q fazer diferente
-  // Se tu olhar em so.h, o processo pode se matar, só q se ele se matar
-  // vai dar segfault nas proximas etapas
   if (process->estado_cpu->X == 0)
   {
     (self->uso_terminais[process->terminal])--;
@@ -432,8 +440,7 @@ static void so_chamada_espera_proc(so_t *self)
   }
   
   process->estado_cpu->A = 0;
-  process->estado_processo = WAITING; // O estado desse processo provalvemente vai ter q ser WAITING, em vez de bloqueado
-  // Para os processos em espera, verificar o estado_cpu->X dele, e ver se tem algum processo com esse pid em execucao
+  process->estado_processo = WAITING;
 }
 
 
