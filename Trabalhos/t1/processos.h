@@ -9,6 +9,7 @@ typedef enum
     INVALID,
     READY,
     RUNNING,
+    WAITING,
     BLOCKED
 } pr_state;
 

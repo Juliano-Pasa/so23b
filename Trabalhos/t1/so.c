@@ -31,6 +31,11 @@ static err_t so_trata_interrupcao(void *argC, int reg_A);
 static int so_carrega_programa(so_t *self, char *nome_do_executavel);
 static bool copia_str_da_mem(int tam, char str[tam], mem_t *mem, int ender);
 
+// funções auxiliares gerais
+static void reseta_processos(so_t *self);
+static void libera_espera(so_t *self, processo* process);
+static processo* busca_processo(so_t *self, int pid);
+
 
 // Se processo_atual = 0, entao nenhum processo esta sendo executado.
 
@@ -44,12 +49,7 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, console_t *console, relogio_t *relogio)
   self->console = console;
   self->relogio = relogio;
 
-  self->pid_atual = 1;
-  self->processo_atual = -1;
-  for (int i = 0; i < TAMANHO_TABELA; i++)
-  {
-    self->tab_processos[i] = NULL;
-  }
+  reseta_processos(self);
 
   // quando a CPU executar uma instrução CHAMAC, deve chamar a função
   //   so_trata_interrupcao
@@ -151,6 +151,12 @@ static void so_trata_pendencias(so_t *self)
   // - E/S pendente
   // - desbloqueio de processos
   // - contabilidades
+
+  for (int i = 0; i < TAMANHO_TABELA; i++)
+  {
+    if (self->tab_processos[i] == NULL) continue;
+    if (self->tab_processos[i]->estado_processo == WAITING) libera_espera(self, self->tab_processos[i]);
+  }
 }
 static void so_escalona(so_t *self)
 {
@@ -226,12 +232,8 @@ static err_t so_trata_irq_reset(so_t *self)
     return ERR_CPU_PARADA;
   }
 
-  self->pid_atual = 1;
+  reseta_processos(self);
   self->processo_atual = 0;
-  for (int i = 0; i < TAMANHO_TABELA; i++)
-  {
-    self->tab_processos[i] = NULL;
-  }
 
   self->tab_processos[self->processo_atual] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual);
   processo* process = self->tab_processos[self->processo_atual];
@@ -417,19 +419,17 @@ static void so_chamada_mata_proc(so_t *self)
 static void so_chamada_espera_proc(so_t *self)
 {
   processo* process = self->tab_processos[self->processo_atual];
-
-  int i = 0;
-  while (i < TAMANHO_TABELA && (self->tab_processos[i])->pid != process->estado_cpu->X) i++;
+  processo* processo_espera = busca_processo(self, process->estado_cpu->X);
   
   // Coloca o processo em estado de erro caso o processo a ser esperado nao exista
-  if (i == TAMANHO_TABELA)
+  if (processo_espera == NULL)
   {
     process->estado_cpu->A = -1; // Isso aqui era pra dar erro, mas nao ta acontecendo
     return;
   }
   
   process->estado_cpu->A = 0;
-  process->estado_processo = BLOCKED; // O estado desse processo provalvemente vai ter q ser WAITING, em vez de bloqueado
+  process->estado_processo = WAITING; // O estado desse processo provalvemente vai ter q ser WAITING, em vez de bloqueado
   // Para os processos em espera, verificar o estado_cpu->X dele, e ver se tem algum processo com esse pid em execucao
 }
 
@@ -482,4 +482,38 @@ static bool copia_str_da_mem(int tam, char str[tam], mem_t *mem, int ender)
   }
   // estourou o tamanho de str
   return false;
+}
+
+
+// Funcoes auxiliares gerais
+
+static void reseta_processos(so_t *self)
+{
+  self->pid_atual = 1;
+  self->processo_atual = -1;
+  for (int i = 0; i < TAMANHO_TABELA; i++)
+  {
+    self->tab_processos[i] = NULL;
+  }
+}
+
+static void libera_espera(so_t *self, processo* process)
+{
+  for (int i = 0; i < TAMANHO_TABELA; i++)
+  {
+    if (self->tab_processos[i] == NULL) continue;
+    if ((self->tab_processos[i])->pid == process->estado_cpu->X) return;
+  }
+  process->estado_processo = READY;
+}
+
+static processo* busca_processo(so_t *self, int pid)
+{
+  for (int i = 0; i < TAMANHO_TABELA; i++)
+  {
+    if (self->tab_processos[i] == NULL) continue;
+    if (self->tab_processos[i]->pid == pid) return self->tab_processos[i];
+  }
+
+  return NULL;
 }
