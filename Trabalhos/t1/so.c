@@ -37,6 +37,7 @@ static bool copia_str_da_mem(int tam, char str[tam], mem_t *mem, int ender);
 // funções auxiliares gerais
 static void reseta_processos(so_t *self);
 static void libera_espera(so_t *self, processo* process);
+static void libera_bloqueio(so_t *self, processo* process);
 static processo* busca_processo(so_t *self, int pid);
 static int encontra_terminal_livre(so_t *self);
 
@@ -160,6 +161,7 @@ static void so_trata_pendencias(so_t *self)
   {
     if (self->tab_processos[i] == NULL) continue;
     if (self->tab_processos[i]->estado_processo == WAITING) libera_espera(self, self->tab_processos[i]);
+    if (self->tab_processos[i]->estado_processo == BLOCKED) libera_bloqueio(self, self->tab_processos[i]);
   }
 }
 static void so_escalona(so_t *self)
@@ -322,83 +324,42 @@ static err_t so_trata_chamada_sistema(so_t *self)
 
 static void so_chamada_le(so_t *self)
 {
-  // implementação com espera ocupada
-  //   deveria bloquear o processo se leitura não disponível.
-  //   no caso de bloqueio do processo, a leitura (e desbloqueio) deverá
-  //   ser feita mais tarde, em tratamentos pendentes em outra interrupção,
-  //   ou diretamente em uma interrupção específica do dispositivo, se for
-  //   o caso
-  // implementação lendo direto do terminal A
-  //   deveria usar dispositivo corrente de entrada do processo
-
   processo* process = self->tab_processos[self->processo_atual];
   int terminal_inicio = process->terminal * 4;
 
-  // int estado;
-  // term_le(self->console, 1, &estado);
+  int estado;
+  term_le(self->console, terminal_inicio + 1, &estado);
 
-  // if (estado == 0)
-  // {
-  //   process->estado_processo = BLOCKED;
-  //   self->processo_atual = -1;
-  //   return;
-  // }
-
-  // term_le(self->console, 0, &(process->estado_cpu->A));
-
-  for (;;) {
-    int estado;
-    term_le(self->console, terminal_inicio + 1, &estado);
-    if (estado != 0) break;
-    // como não está saindo do SO, o laço do processador não tá rodando
-    // esta gambiarra faz o console andar
-    // com a implementação de bloqueio de processo, esta gambiarra não
-    //   deve mais existir.
-    console_tictac(self->console);
-    console_atualiza(self->console);
+  if (estado == 0)
+  {
+    process->estado_processo = BLOCKED;
+    process->estado_cpu->A = -1;
+    self->processo_atual = -1;
+    return;
   }
-  int dado;
-  term_le(self->console, terminal_inicio, &dado);
-  // com processo, deveria escrever no reg A do processo
-  mem_escreve(self->mem, IRQ_END_A, dado);
+
+  term_le(self->console, terminal_inicio, &(process->estado_cpu->A));
 }
 
 static void so_chamada_escr(so_t *self)
 {
-  // implementação com espera ocupada
-  //   deveria bloquear o processo se dispositivo ocupado
-  // implementação escrevendo direto do terminal A
-  //   deveria usar dispositivo corrente de saída do processo
-
   processo* process = self->tab_processos[self->processo_atual];
   int terminal_inicio = process->terminal * 4;
 
-  // int estado;
-  // term_le(self->console, 3, &estado);
+  int estado;
+  term_le(self->console, terminal_inicio + 3, &estado);
   
-  // if (estado == 0)
-  // {
-  //   process->estado_processo = BLOCKED;
-  //   self->processo_atual = 1;
-  //   return;
-  // }
-
-  // term_escr(self->console, 2, process->estado_cpu->X);
-  // process->estado_cpu->A = 0;
-
-  for (;;) {
-    int estado;
-    term_le(self->console, terminal_inicio + 3, &estado);
-    if (estado != 0) break;
-    // como não está saindo do SO, o laço do processador não tá rodando
-    // esta gambiarra faz o console andar
-    console_tictac(self->console);
-    console_atualiza(self->console);
+  if (estado == 0)
+  {
+    console_printf(self->console, "Processo atual bloqueado escrita %d", process->pid);
+    process->estado_processo = BLOCKED;
+    process->estado_cpu->A = -1;
+    self->processo_atual = -1;
+    return;
   }
-  int dado;
-  mem_le(self->mem, IRQ_END_X, &dado);
-  term_escr(self->console, terminal_inicio + 2, dado);
-  mem_escreve(self->mem, IRQ_END_A, 0);
+
+  term_escr(self->console, terminal_inicio + 2, process->estado_cpu->X);
+  process->estado_cpu->A = 0;
 }
 
 static void so_chamada_cria_proc(so_t *self)
@@ -553,6 +514,40 @@ static void libera_espera(so_t *self, processo* process)
   process->estado_processo = READY;
 }
 
+// PROVAVELMENTE PRECISA SER REFATORADA!
+// Somente processos bloqueados entraram nessa funcao.
+// A gente tem q encontrar alguma forma de identificar o motivo
+// do bloqueio de um processo, pra gente conseguir verificar se a causa
+// desse bloqueio ja foi resolvida, e entao desbloquear ele.
+//
+// Uma ideia que eu tive é o SO armazenar os processos bloqueados
+// junto com um identificador. Seria um vetor de pares (processo, bloqueio).
+// Dessa forma, da pra identificar o que bloqueou o processo e tratar isso na hora
+// de liberar ele. 
+//
+// Outra opcao eh adicionar mais um campo no processo, identificando porque ele foi bloqueado.
+static void libera_bloqueio(so_t *self, processo* process)
+{
+  int inicio_terminal = process->terminal * 4;
+
+  int estadoLeitura, estadoEscrita;
+  term_le(self->console, inicio_terminal + 1, &estadoLeitura);
+  term_le(self->console, inicio_terminal + 3, &estadoEscrita);
+
+  // So esta sendo considerado o desbloqueio de processos que foram
+  // bloqueados por nao conseguir escrever.
+  // Se esse processo poder ser desbloqueado, entao eh necessario fazer a
+  // escrita do caracter que tinha sido bloqueado, por isso term_escr eh chamado
+  // dentro desse if.
+  if (estadoEscrita != 0)
+  {
+    term_escr(self->console, inicio_terminal + 2, process->estado_cpu->X);
+    process->estado_processo = READY;
+    process->estado_cpu->A = 0;
+  }
+}
+
+
 static processo* busca_processo(so_t *self, int pid)
 {
   for (int i = 0; i < TAMANHO_TABELA; i++)
@@ -579,4 +574,3 @@ static int encontra_terminal_livre(so_t *self)
 
   return idMenor;
 }
-
