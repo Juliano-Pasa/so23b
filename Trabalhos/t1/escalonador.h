@@ -15,7 +15,7 @@ typedef struct escalonador_t escalonador_t;
 struct no_processo
 {
     int pid;
-    int prioridade; //Não usado    
+    float prioridade; //Não usado    
     processo* proc; //Processo representado pelo nó.
 
     no_processo* proximo_no;
@@ -27,7 +27,7 @@ struct fila_processos
 };
 
 struct escalonador_t{
-    fila_processos fila_prontos;
+    fila_processos* fila_prontos;
     //fila_processos fila_nao_prontos;
 };
 

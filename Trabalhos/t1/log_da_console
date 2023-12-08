@@ -1,0 +1,3161 @@
+c
+SO: recebi IRQ 0 (Reset)
+SO: recebi IRQ 0 (Reset)
+SO: carga de 'init.maq' em 100-270
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 7
+SO: carga de 'p1.maq' em 7100-7341
+
+printando!!!
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 7
+SO: carga de 'p2.maq' em 8100-8343
+
+printando!!!
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 7
+SO: carga de 'p3.maq' em 9100-9341
+
+printando!!!
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 9
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo 4 bloqueado para escrita
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo 3 bloqueado para escrita
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio, decrementando o quantum.
+SO: interrupção do relógio (não tratada)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: recebi IRQ 2 (Chamada de sistema)
+SO: chamada de sistema 2
+Processo 2 bloqueado para escrita
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: relógio)
+SO: interrupção do relógio (não tratada)
+
+ Estamos sem processos. :C
+SO: recebi IRQ 3 (E/S: relógio)
+SO: recebi IRQ 3 (E/S: rel

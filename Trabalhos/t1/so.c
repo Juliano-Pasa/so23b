@@ -42,6 +42,7 @@ static void reseta_processos(so_t *self);
 static void libera_espera(so_t *self, processo* process);
 static void libera_bloqueio(so_t *self, processo* process);
 static processo* busca_processo(so_t *self, int pid);
+static int busca_indice_processo(so_t *self, int pid);
 static int encontra_terminal_livre(so_t *self);
 
 
@@ -116,30 +117,27 @@ static void so_despacha(so_t *self);
 //   no endereço 0, e desvia para o endereço 10
 static err_t so_trata_interrupcao(void *argC, int reg_A)
 {
-  printf("\na\n");
   so_t *self = argC;
-  printf("\nb\n");
   irq_t irq = reg_A;
-  printf("\nc\n");
   err_t err;
-  printf("\nd\n");
+  
   console_printf(self->console, "SO: recebi IRQ %d (%s)", irq, irq_nome(irq));
-  printf("\ne\n");
+  
   // salva o estado da cpu no descritor do processo que foi interrompido
   so_salva_estado_da_cpu(self);
-  printf("\nf\n");
+  
   // faz o atendimento da interrupção
   err = so_trata_irq(self, irq);
-  printf("\ng\n");
+  
   // faz o processamento independente da interrupção
   so_trata_pendencias(self);
-  printf("\nh\n");
+  
   // escolhe o próximo processo a executar
   so_escalona(self);
-  printf("\ni\n");
+  
   // recupera o estado do processo escolhido
   so_despacha(self);
-  printf("\nj\n");
+  
   return err;
 }
 
@@ -174,49 +172,54 @@ static void so_trata_pendencias(so_t *self)
   // - desbloqueio de processos
   // - contabilidades
 
+  //console_printf(self->console, "A1");
   for (int i = 0; i < TAMANHO_TABELA; i++)
   {
+    //console_printf(self->console, "C0 %i", i);
     if (self->tab_processos[i] == NULL) continue;
+    //console_printf(self->console, "C1");
     if (self->tab_processos[i]->estado_processo == WAITING) libera_espera(self, self->tab_processos[i]);
+    //console_printf(self->console, "C2");
     if (self->tab_processos[i]->estado_processo == BLOCKED) libera_bloqueio(self, self->tab_processos[i]);
   }
+  //console_printf(self->console, "A2");
 }
 static void so_escalona(so_t *self)
 {
+  
+  if(self->processo_atual >= 0)
+  {
+    if((self->tab_processos[self->processo_atual])->quantum > 0)
+      return;
+
+    escalonador_enfila_processo(self->tab_processos[self->processo_atual], self->escalonador);
+  }
+
 
   //Pede pro escalonador até achar um processo ready.
   //O escalonador assume que os processos na lista dele estao ready, mas na verdade ele guarda todos os processos.
   
-  printf("\n1");
   //console_printf(self->console, "Escalonador em ação");
-  printf("\n2");
-  processo* processo_candidato = escalonador_desenfila_processo(self->escalonador);
-  printf("\n3");
-  while(true)
+  processo* processo_candidato = NULL; 
+  processo_candidato = escalonador_desenfila_processo(self->escalonador);
+  while(NULL != processo_candidato)
   {
-      if (processo_candidato == NULL)
-      {
-        console_printf(self->console, "Escalonador me retornou nulo, mas que filho da puta.");
-        break;
-      }
-
       if (processo_candidato->estado_processo != READY)
       {        
-        console_printf(self->console, "Escalonador me retornou nulo, mas que filho da puta.");
+        //console_printf(self->console, "Escalonador me retornou nulo, mas que filho da puta.");
         escalonador_enfila_processo(processo_candidato, self->escalonador);
         processo_candidato = escalonador_desenfila_processo(self->escalonador);
         continue;
       }
 
+      self->processo_atual = busca_indice_processo(self, processo_candidato->pid);
+      self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;      
+
       //Tratar quando não existe ready.
       //Se chegou até aqui, consegui um processo ready.
       break;
   }
-
-  //isso aqui nem faz sentido, mas é por que o escalonador quarda processos, ele poderia guardar só o PID
-  //mas vamos manter assim por questão de adaptabilidade futura.
-  self->processo_atual = processo_candidato->pid;
-  self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;
+  console_printf(self->console, "\n Estamos sem processos. :C");
 }
 static void so_despacha(so_t *self)
 {
@@ -349,8 +352,7 @@ static err_t so_trata_chamada_sistema(so_t *self)
 {
   int id_chamada = (self->tab_processos[self->processo_atual])->estado_cpu->A;
   
-  console_printf(self->console,
-      "SO: chamada de sistema %d", id_chamada);
+  console_printf(self->console, "SO: chamada de sistema %d", id_chamada);
   switch (id_chamada) {
     case SO_LE:
       so_chamada_le(self);
@@ -396,23 +398,36 @@ static void so_chamada_le(so_t *self)
 
 static void so_chamada_escr(so_t *self)
 {
+  
   processo* process = self->tab_processos[self->processo_atual];
+  
   int terminal_inicio = process->terminal * 4;
+  
 
   int estado;
+  
   term_le(self->console, terminal_inicio + 3, &estado);
+  
   
   if (estado == 0)
   {
+    
     console_printf(self->console, "Processo %d bloqueado para escrita", process->pid);
+    
     process->estado_processo = BLOCKED;
+    
     process->estado_cpu->A = -1;
+    
     self->processo_atual = -1;
+    
     return;
   }
 
+
   term_escr(self->console, terminal_inicio + 2, process->estado_cpu->X);
+  
   process->estado_cpu->A = 0;
+  
 }
 
 static void so_chamada_cria_proc(so_t *self)
@@ -482,6 +497,7 @@ static void so_chamada_espera_proc(so_t *self)
     return;
   }
   
+  self->processo_atual = -1;
   process->estado_cpu->A = 0;
   process->estado_processo = WAITING;
 }
@@ -607,6 +623,17 @@ static processo* busca_processo(so_t *self, int pid)
   }
 
   return NULL;
+}
+
+static int busca_indice_processo(so_t *self, int pid)
+{
+  for (int i = 0; i < TAMANHO_TABELA; i++)
+  {
+    if (self->tab_processos[i] == NULL) continue;
+    if (self->tab_processos[i]->pid == pid) return i;
+  }
+
+  return -1;
 }
 
 static int encontra_terminal_livre(so_t *self)

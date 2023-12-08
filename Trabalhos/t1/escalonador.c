@@ -16,11 +16,12 @@ static no_processo* fila_acha_fim(fila_processos* f);
 escalonador_t* escalonador_cria()
 {
     escalonador_t* esc = malloc(sizeof(escalonador_t));
-    esc->fila_prontos.raiz = NULL;
+    esc->fila_prontos = malloc(sizeof(fila_processos));
+    esc->fila_prontos->raiz = NULL;
 
     /*
         int i;
-        esc->fila_prontos.raiz = NULL;
+        esc->fila_prontos->raiz = NULL;
         for(i = 0; i < numero_processos; i++)
         {
             if(processos[i] != NULL)
@@ -36,13 +37,12 @@ escalonador_t* escalonador_cria()
 
 void escalonador_enfila_processo(processo* p, escalonador_t* esc)
 {
-    printf("\nBotamo um nó na fila fodase.");
-    fila_processos* f = &esc->fila_prontos;
-    if(f->raiz == NULL)
-        f->raiz = cria_no(p);
+    
+    if(esc->fila_prontos->raiz == NULL)
+        esc->fila_prontos->raiz = cria_no(p);
     else
     {
-        no_processo* ultimo_no = fila_acha_fim(f);
+        no_processo* ultimo_no = fila_acha_fim(esc->fila_prontos);
         ultimo_no->proximo_no = cria_no(p);
     }
 
@@ -52,15 +52,14 @@ void escalonador_enfila_processo(processo* p, escalonador_t* esc)
 
 processo* escalonador_desenfila_processo(escalonador_t* esc)
 {
-
-    if(esc->fila_prontos.raiz == NULL)
+    if(esc->fila_prontos->raiz == NULL)
     {
-        printf("Escalonador retornou nulo, não havia um nó raiz de processo.");
+        //printf("Escalonador retornou nulo, não havia um nó raiz de processo.");
         return NULL;
     }
 
-    no_processo* no_p = esc->fila_prontos.raiz;
-    esc->fila_prontos.raiz = no_p->proximo_no;
+    no_processo* no_p = esc->fila_prontos->raiz;
+    esc->fila_prontos->raiz = no_p->proximo_no;
     processo* proc = no_p->proc;
     libera_no(no_p);
 
