@@ -116,21 +116,30 @@ static void so_despacha(so_t *self);
 //   no endereço 0, e desvia para o endereço 10
 static err_t so_trata_interrupcao(void *argC, int reg_A)
 {
+  printf("\na\n");
   so_t *self = argC;
-  console_printf(self->console, "Flamengooo!");
+  printf("\nb\n");
   irq_t irq = reg_A;
+  printf("\nc\n");
   err_t err;
+  printf("\nd\n");
   console_printf(self->console, "SO: recebi IRQ %d (%s)", irq, irq_nome(irq));
+  printf("\ne\n");
   // salva o estado da cpu no descritor do processo que foi interrompido
   so_salva_estado_da_cpu(self);
+  printf("\nf\n");
   // faz o atendimento da interrupção
   err = so_trata_irq(self, irq);
+  printf("\ng\n");
   // faz o processamento independente da interrupção
   so_trata_pendencias(self);
+  printf("\nh\n");
   // escolhe o próximo processo a executar
   so_escalona(self);
+  printf("\ni\n");
   // recupera o estado do processo escolhido
   so_despacha(self);
+  printf("\nj\n");
   return err;
 }
 
@@ -178,10 +187,13 @@ static void so_escalona(so_t *self)
   //Pede pro escalonador até achar um processo ready.
   //O escalonador assume que os processos na lista dele estao ready, mas na verdade ele guarda todos os processos.
   
-  processo* processo_candidato = NULL;
+  printf("\n1");
+  //console_printf(self->console, "Escalonador em ação");
+  printf("\n2");
+  processo* processo_candidato = escalonador_desenfila_processo(self->escalonador);
+  printf("\n3");
   while(true)
   {
-      processo_candidato = escalonador_desenfila_processo(self->escalonador);
       if (processo_candidato == NULL)
       {
         console_printf(self->console, "Escalonador me retornou nulo, mas que filho da puta.");
@@ -190,10 +202,13 @@ static void so_escalona(so_t *self)
 
       if (processo_candidato->estado_processo != READY)
       {        
+        console_printf(self->console, "Escalonador me retornou nulo, mas que filho da puta.");
         escalonador_enfila_processo(processo_candidato, self->escalonador);
+        processo_candidato = escalonador_desenfila_processo(self->escalonador);
         continue;
       }
 
+      //Tratar quando não existe ready.
       //Se chegou até aqui, consegui um processo ready.
       break;
   }
@@ -420,6 +435,7 @@ static void so_chamada_cria_proc(so_t *self)
       (self->uso_terminais[terminal])++;
 
       self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal);
+      console_printf(self->console, "\nprintando!!!\n");
       escalonador_enfila_processo(self->tab_processos[posicao_processo], self->escalonador);
       process->estado_cpu->A = self->pid_atual;
 
