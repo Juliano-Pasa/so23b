@@ -3,13 +3,15 @@
 #include "programa.h"
 #include "instrucao.h"
 #include "processos.h"
+#include "escalonador.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
 
 // intervalo entre interrupções do relógio
-#define INTERVALO_INTERRUPCAO 50   // em instruções executadas
+#define INTERVALO_INTERRUPCAO 20   // em instruções executadas
+#define DEFAULT_QUANTUM_SIZE 5    //Define quanto cada processo recebe de quantums (interrupções de relogio)
 #define TAMANHO_TABELA 10
 #define TOTAL_TERMINAIS 4
 
@@ -19,6 +21,7 @@ struct so_t {
   console_t *console;
   relogio_t *relogio;
 
+  escalonador_t* escalonador;
   int pid_atual;
   int processo_atual; // Se processo_atual = -1, entao nenhum processo esta sendo executado no momento
   processo* tab_processos[TAMANHO_TABELA];
@@ -44,6 +47,8 @@ static int encontra_terminal_livre(so_t *self);
 
 // Se processo_atual = 0, entao nenhum processo esta sendo executado.
 
+
+
 so_t *so_cria(cpu_t *cpu, mem_t *mem, console_t *console, relogio_t *relogio)
 {
   so_t *self = malloc(sizeof(*self));
@@ -53,6 +58,8 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, console_t *console, relogio_t *relogio)
   self->mem = mem;
   self->console = console;
   self->relogio = relogio;
+
+  self->escalonador = escalonador_cria();
 
   reseta_processos(self);
 
@@ -110,6 +117,7 @@ static void so_despacha(so_t *self);
 static err_t so_trata_interrupcao(void *argC, int reg_A)
 {
   so_t *self = argC;
+  console_printf(self->console, "Flamengooo!");
   irq_t irq = reg_A;
   err_t err;
   console_printf(self->console, "SO: recebi IRQ %d (%s)", irq, irq_nome(irq));
@@ -166,21 +174,34 @@ static void so_trata_pendencias(so_t *self)
 }
 static void so_escalona(so_t *self)
 {
-  int menorPid = self->pid_atual + 1;
-  int indexMenorPid = -1;
 
-  for (int i = 0; i < TAMANHO_TABELA; i++)
-  {
-    if (self->tab_processos[i] == NULL) continue;
-    if ((self->tab_processos[i])->estado_processo != READY) continue;
-    if (self->tab_processos[i]->pid < menorPid)
-    {
-      menorPid = self->tab_processos[i]->pid;
-      indexMenorPid = i;
-    }
-  }
+  //Pede pro escalonador até achar um processo ready.
+  //O escalonador assume que os processos na lista dele estao ready, mas na verdade ele guarda todos os processos.
   
-  self->processo_atual = indexMenorPid;
+  processo* processo_candidato = NULL;
+  while(true)
+  {
+      processo_candidato = escalonador_desenfila_processo(self->escalonador);
+      if (processo_candidato == NULL)
+      {
+        console_printf(self->console, "Escalonador me retornou nulo, mas que filho da puta.");
+        break;
+      }
+
+      if (processo_candidato->estado_processo != READY)
+      {        
+        escalonador_enfila_processo(processo_candidato, self->escalonador);
+        continue;
+      }
+
+      //Se chegou até aqui, consegui um processo ready.
+      break;
+  }
+
+  //isso aqui nem faz sentido, mas é por que o escalonador quarda processos, ele poderia guardar só o PID
+  //mas vamos manter assim por questão de adaptabilidade futura.
+  self->processo_atual = processo_candidato->pid;
+  self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;
 }
 static void so_despacha(so_t *self)
 {
@@ -284,6 +305,11 @@ static err_t so_trata_irq_relogio(so_t *self)
   rel_escr(self->relogio, 2, INTERVALO_INTERRUPCAO);
   // trata a interrupção
   // por exemplo, decrementa o quantum do processo corrente, quando se tem
+  if(self->processo_atual > -1)
+  {    
+    console_printf(self->console, "SO: interrupção do relógio, decrementando o quantum.");
+    self->tab_processos[self->processo_atual]->quantum--;
+  }
   // um escalonador com quantum
   console_printf(self->console, "SO: interrupção do relógio (não tratada)");
   return ERR_OK;
@@ -394,6 +420,7 @@ static void so_chamada_cria_proc(so_t *self)
       (self->uso_terminais[terminal])++;
 
       self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal);
+      escalonador_enfila_processo(self->tab_processos[posicao_processo], self->escalonador);
       process->estado_cpu->A = self->pid_atual;
 
       return;

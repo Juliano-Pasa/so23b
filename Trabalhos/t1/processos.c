@@ -16,6 +16,7 @@ processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_m
 
     process->estado_processo = estado_processo;
     process->pid = pid;
+    process->quantum = 0;
     process->terminal = terminal;
 
     return process;
