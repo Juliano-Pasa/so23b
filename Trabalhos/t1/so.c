@@ -46,10 +46,6 @@ static int busca_indice_processo(so_t *self, int pid);
 static int encontra_terminal_livre(so_t *self);
 
 
-// Se processo_atual = 0, entao nenhum processo esta sendo executado.
-
-
-
 so_t *so_cria(cpu_t *cpu, mem_t *mem, console_t *console, relogio_t *relogio)
 {
   so_t *self = malloc(sizeof(*self));
@@ -172,17 +168,12 @@ static void so_trata_pendencias(so_t *self)
   // - desbloqueio de processos
   // - contabilidades
 
-  //console_printf(self->console, "A1");
   for (int i = 0; i < TAMANHO_TABELA; i++)
   {
-    //console_printf(self->console, "C0 %i", i);
     if (self->tab_processos[i] == NULL) continue;
-    //console_printf(self->console, "C1");
     if (self->tab_processos[i]->estado_processo == WAITING) libera_espera(self, self->tab_processos[i]);
-    //console_printf(self->console, "C2");
     if (self->tab_processos[i]->estado_processo == BLOCKED) libera_bloqueio(self, self->tab_processos[i]);
   }
-  //console_printf(self->console, "A2");
 }
 static void so_escalona(so_t *self)
 {
@@ -213,13 +204,11 @@ static void so_escalona(so_t *self)
       }
 
       self->processo_atual = busca_indice_processo(self, processo_candidato->pid);
-      self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;      
+      self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;    
 
-      //Tratar quando não existe ready.
-      //Se chegou até aqui, consegui um processo ready.
-      break;
+      return;
   }
-  console_printf(self->console, "\n Estamos sem processos. :C");
+  self->processo_atual = -1;
 }
 static void so_despacha(so_t *self)
 {
@@ -328,8 +317,6 @@ static err_t so_trata_irq_relogio(so_t *self)
     console_printf(self->console, "SO: interrupção do relógio, decrementando o quantum.");
     self->tab_processos[self->processo_atual]->quantum--;
   }
-  // um escalonador com quantum
-  console_printf(self->console, "SO: interrupção do relógio (não tratada)");
   return ERR_OK;
 }
 
@@ -399,35 +386,22 @@ static void so_chamada_le(so_t *self)
 static void so_chamada_escr(so_t *self)
 {
   
-  processo* process = self->tab_processos[self->processo_atual];
-  
+  processo* process = self->tab_processos[self->processo_atual];  
   int terminal_inicio = process->terminal * 4;
-  
-
-  int estado;
-  
-  term_le(self->console, terminal_inicio + 3, &estado);
-  
+  int estado;  
+  term_le(self->console, terminal_inicio + 3, &estado);  
   
   if (estado == 0)
-  {
-    
-    console_printf(self->console, "Processo %d bloqueado para escrita", process->pid);
-    
-    process->estado_processo = BLOCKED;
-    
-    process->estado_cpu->A = -1;
-    
-    self->processo_atual = -1;
-    
+  {    
+    console_printf(self->console, "Processo %d bloqueado para escrita", process->pid);    
+    process->estado_processo = BLOCKED;    
+    process->estado_cpu->A = -1;    
+    self->processo_atual = -1;    
     return;
   }
 
-
-  term_escr(self->console, terminal_inicio + 2, process->estado_cpu->X);
-  
-  process->estado_cpu->A = 0;
-  
+  term_escr(self->console, terminal_inicio + 2, process->estado_cpu->X);  
+  process->estado_cpu->A = 0;  
 }
 
 static void so_chamada_cria_proc(so_t *self)
@@ -450,7 +424,6 @@ static void so_chamada_cria_proc(so_t *self)
       (self->uso_terminais[terminal])++;
 
       self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal);
-      console_printf(self->console, "\nprintando!!!\n");
       escalonador_enfila_processo(self->tab_processos[posicao_processo], self->escalonador);
       process->estado_cpu->A = self->pid_atual;
 
@@ -578,6 +551,7 @@ static void libera_espera(so_t *self, processo* process)
     if ((self->tab_processos[i])->pid == process->estado_cpu->X) return;
   }
   process->estado_processo = READY;
+  escalonador_enfila_processo(process, self->escalonador);
 }
 
 // PROVAVELMENTE PRECISA SER REFATORADA!
@@ -594,6 +568,8 @@ static void libera_espera(so_t *self, processo* process)
 // Outra opcao eh adicionar mais um campo no processo, identificando porque ele foi bloqueado.
 static void libera_bloqueio(so_t *self, processo* process)
 {
+  console_printf(self->console, "SO: Tentando liberar processo %d", process->pid);
+
   int inicio_terminal = process->terminal * 4;
 
   int estadoLeitura, estadoEscrita;
@@ -610,6 +586,8 @@ static void libera_bloqueio(so_t *self, processo* process)
     term_escr(self->console, inicio_terminal + 2, process->estado_cpu->X);
     process->estado_processo = READY;
     process->estado_cpu->A = 0;
+    escalonador_enfila_processo(process, self->escalonador);
+    console_printf(self->console, "SO: Processo %d liberado para escrita", process->pid);
   }
 }
 
