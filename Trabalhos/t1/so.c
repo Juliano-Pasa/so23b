@@ -142,11 +142,13 @@ static err_t so_trata_interrupcao(void *argC, int reg_A)
   // faz o processamento independente da interrupção
   so_trata_pendencias(self);
   
-  console_printf(self->console, "Vasco4");
+  console_printf(self->console, "Escalona");
+  //printf("\nEscalona");
   // escolhe o próximo processo a executar
   so_escalona(self);
   
-  console_printf(self->console, "Vasco5");
+  console_printf(self->console, "Despacha");
+  //printf("\nDespacha");
   // recupera o estado do processo escolhido
   so_despacha(self);
   
@@ -212,46 +214,38 @@ static void so_escalona(so_t *self)
       // Preempção, reajusta a prioridade.   
       ajusta_prioridade(p, self);
       // Devolve o processo atual pra fila, após recalcular
-      printf("\n Enfileirando. ");
+      //printf("\n Enfileirando. ");
       escalonador_enfila_processo_prioridade(p, self->escalonador);
-      printf("\n ENFILEIRADO. ");
+      //printf("\n ENFILEIRADO. ");
     }
     else
     {
       //Apenas coloca no final da fila. 
-      printf("\n Enfileirando. ");     
+      //printf("\n Enfileirando. ");     
       escalonador_enfila_processo(self->tab_processos[self->processo_atual], self->escalonador);
-      printf("\n ENFILEIRADO. ");
+      //printf("\n ENFILEIRADO. ");
     }
   }
 
   //Pede pro escalonador até achar um processo ready.
   //O escalonador assume que os processos na lista dele estao ready, mas na verdade ele guarda todos os processos.
   
-  console_printf(self->console, "M00");
   processo* processo_candidato = NULL; 
-  console_printf(self->console, "M01");
   processo_candidato = escalonador_desenfila_processo(self->escalonador);
-  console_printf(self->console, "M02");
 
   if(processo_candidato == NULL)
   {
-    console_printf(self->console, "M0");
+    console_printf(self->console, "\n Estamos sem processos. :C");
     self->processo_atual = -1;
     return;
   }
   
-  console_printf(self->console, "M1");
   self->processo_atual = busca_indice_processo(self, processo_candidato->pid);
-  console_printf(self->console, "M2");
-  self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;   
-  console_printf(self->console, "M3");
+  self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;  
   int agr = rel_agora(self->relogio);
-  console_printf(self->console, "M4");
 
   self->tab_processos[self->processo_atual]->exec_inicio = agr;
 
-  console_printf(self->console, "M5");
   //printf("\nFFFFFFFFFFFFFF %i", self->processo_atual);
 
   /*if(CONSIDERA_PRIORIDADE)
@@ -360,14 +354,12 @@ static err_t so_trata_irq_err_cpu(so_t *self)
 
 static err_t so_trata_irq_relogio(so_t *self)
 {
-  printf("Tá foda");
   // ocorreu uma interrupção do relógio
   // rearma o interruptor do relógio e reinicializa o timer para a próxima interrupção
   rel_escr(self->relogio, 3, 0); // desliga o sinalizador de interrupção
   rel_escr(self->relogio, 2, INTERVALO_INTERRUPCAO);
   self->relogio_incrementos++;
-
-  printf("Relogio chamadas: %i", self->relogio_incrementos);
+  
 
   // trata a interrupção
   // por exemplo, decrementa o quantum do processo corrente, quando se tem
@@ -375,12 +367,10 @@ static err_t so_trata_irq_relogio(so_t *self)
   {    
     console_printf(self->console, "SO: interrupção do relógio, decrementando o quantum.");
     self->tab_processos[self->processo_atual]->quantum--;
-  printf("BBBBBBBBBBBBBBBBBBBBBBBBBB");
   }
   else
   {    
     console_printf(self->console, "SO: processo é -1.");
-  printf("AAAAAAAAAAAAAAAAAAAA");
   }
   return ERR_OK;
 }
@@ -723,7 +713,6 @@ static int busca_indice_processo(so_t *self, int pid)
     if (self->tab_processos[i] == NULL) continue;
     if (self->tab_processos[i]->pid == pid) return i;
   }
-
   return -1;
 }
 
@@ -753,5 +742,4 @@ static void ajusta_prioridade(processo* p, so_t *self)
     double t_exec = rel_agora(self->relogio) - p->exec_inicio;
     p->prioridade = p->prioridade + t_exec/t_quantum;
 
-    printf("\n Ajustando a prioridade do processo %i para %f", p->pid, p->prioridade);
 }

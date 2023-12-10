@@ -5,16 +5,8 @@ Vasco2
 SO: recebi IRQ 0 (Reset)
 SO: carga de 'init.maq' em 100-270
 Vasco3x
-Vasco4
-M00
-M01
-M02
-M1
-M2
-M3
-M4
-M5
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -25,8 +17,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -37,8 +29,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -49,8 +41,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -61,8 +53,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -73,8 +65,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -85,8 +77,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -97,8 +89,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -109,8 +101,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -121,8 +113,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -133,16 +125,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-M00
-M01
-M02
-M1
-M2
-M3
-M4
-M5
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -153,8 +137,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -165,8 +149,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -177,8 +161,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -189,8 +173,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -201,8 +185,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -213,8 +197,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -225,8 +209,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -237,8 +221,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -249,8 +233,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -261,8 +245,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -273,16 +257,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-M00
-M01
-M02
-M1
-M2
-M3
-M4
-M5
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -293,8 +269,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -305,8 +281,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -317,8 +293,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -329,8 +305,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -341,8 +317,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -353,8 +329,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -365,8 +341,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -377,8 +353,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -389,8 +365,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -401,8 +377,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -413,16 +389,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-M00
-M01
-M02
-M1
-M2
-M3
-M4
-M5
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -433,8 +401,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -445,8 +413,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -457,8 +425,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -469,8 +437,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -481,8 +449,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -493,8 +461,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -505,8 +473,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -517,8 +485,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -529,8 +497,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -542,8 +510,8 @@ SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 7
 SO: carga de 'p1.maq' em 7100-7341
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -555,8 +523,8 @@ SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 7
 SO: carga de 'p2.maq' em 8100-8343
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -568,8 +536,8 @@ SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 7
 SO: carga de 'p3.maq' em 9100-9341
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -580,16 +548,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-M00
-M01
-M02
-M1
-M2
-M3
-M4
-M5
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -600,8 +560,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -612,8 +572,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -624,8 +584,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -636,8 +596,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -648,8 +608,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -660,8 +620,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -672,8 +632,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -684,8 +644,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -696,8 +656,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -708,8 +668,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -720,16 +680,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-M00
-M01
-M02
-M1
-M2
-M3
-M4
-M5
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -740,8 +692,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -752,8 +704,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -764,8 +716,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -776,8 +728,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -788,8 +740,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -800,8 +752,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -812,8 +764,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -824,8 +776,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -836,8 +788,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -848,8 +800,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -860,16 +812,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-M00
-M01
-M02
-M1
-M2
-M3
-M4
-M5
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -880,8 +824,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -892,8 +836,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -904,8 +848,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -916,8 +860,8 @@ Vasco2
 SO: recebi IRQ 3 (E/S: relógio)
 SO: interrupção do relógio, decrementando o quantum.
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 2 (Chamada de sistema)
 Vasco1
 AV1
@@ -928,8 +872,8 @@ Vasco2
 SO: recebi IRQ 2 (Chamada de sistema)
 SO: chamada de sistema 2
 Vasco3x
-Vasco4
-Vasco5
+Escalona
+Despacha
 SO: recebi IRQ 3 (E/S: relógio)
 Vasco1
 AV1
@@ -937,9 +881,4 @@ AV2
 AV3
 AV4
 Vasco2
-SO: recebi IRQ 3 (E/S: relógio)
-SO: interrupção do relógio, decrementando o quantum.
-Vasco3x
-Vasco4
-Vasco5
-SO: receb
+SO: recebi IRQ 3 

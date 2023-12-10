@@ -52,19 +52,16 @@ void escalonador_enfila_processo(processo* p, escalonador_t* esc)
 // Pop da fila.
 processo* escalonador_desenfila_processo(escalonador_t* esc)
 {
-    printf("EsC1");
     if(esc->fila_prontos->raiz == NULL)
     {
         printf("Escalonador retornou nulo, não havia um nó raiz de processo.");
         return NULL;
     }
 
-    printf("EsC2");
     no_processo* no_p = esc->fila_prontos->raiz;
     esc->fila_prontos->raiz = no_p->proximo_no;
     processo* proc = no_p->proc;
     libera_no(no_p);
-    printf("EsC3");
 
     return proc;
 }
@@ -72,7 +69,6 @@ processo* escalonador_desenfila_processo(escalonador_t* esc)
 //Insere processos com maior prioridade primeiro
 void escalonador_enfila_processo_prioridade(processo* p, escalonador_t* esc)
 {
-    printf("\nDebug1");
     //Guard Clause
     //Se a fila está vazia, ele deveria setar como 0.5?
     if(esc->fila_prontos->raiz == NULL)
@@ -81,7 +77,6 @@ void escalonador_enfila_processo_prioridade(processo* p, escalonador_t* esc)
         return;
     }
 
-    printf("\nDebug2");
     //Se a prioridae for maior que o primeiro nó da fila, atualiza
     if(esc->fila_prontos->raiz->proc->prioridade < p->prioridade)
     {
@@ -92,7 +87,6 @@ void escalonador_enfila_processo_prioridade(processo* p, escalonador_t* esc)
         return;
     }
 
-    printf("\nDebug3");
     //Só restam os casos onde:
     // - O lugar certo da prioridade é no meio da fila.
     // - O lugar certo da prioridade é no final da fila.
@@ -102,7 +96,6 @@ void escalonador_enfila_processo_prioridade(processo* p, escalonador_t* esc)
     no_processo* no_sucessor_novo = no_antecessor_novo->proximo_no;
     no_processo* no_novo = cria_no(p);
 
-    printf("\nDebug4");
     no_novo->proximo_no = no_sucessor_novo;
     no_antecessor_novo->proximo_no = no_novo;
 
@@ -165,7 +158,6 @@ static no_processo* fila_acha_fim(fila_processos* f)
         no_p = no_p->proximo_no;
     }
 
-    printf("\n Achei o último nó e retornei kkkkkkkkkkkkkkkk, %i", no_p->proc->pid);
     return no_p;
 }
 
