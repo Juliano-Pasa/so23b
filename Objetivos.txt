@@ -1,0 +1,24 @@
+Processo tem:
+- Estado da cpu
+- Seguir o init.
+
+IRQ.h - Tipos de interrupção
+- So trata IRQ
+
+Precisa implementar os IRQS
+- Reset já ta implementado.
+- CPU ERROR - precisa implementar.
+- CLOCK ERROR - precisa implementar (P III?)
+- SYSTEM ERROR - precisa implementar... parte já foi feito.
+
+SO.H e SO.C
+
+- Cabeçalhos implementados, corpos da função não temos certeza.
+- Precisa fazer o de LEITURA.
+- Precisa fazer o de ESCRITA.
+- Matar processo precisa de revisão. (se pa quebra)
+- Chamada espera processo -> PRECISA fazer.
+- SO TRATA PENDENCIAS?? - (Respostas de Dùvidas)
+- WAINTING verifica se o 
+
+CHAMADA DE SISTEMA X - > CONSULTAR S0.H

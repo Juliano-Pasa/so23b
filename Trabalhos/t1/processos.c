@@ -1,6 +1,8 @@
 #include "processos.h"
 
 #include <stdlib.h>
+#include <sys/time.h>
+
 
 processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid, int terminal)
 {
@@ -15,9 +17,13 @@ processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_m
     process->estado_cpu->modo = modo;
 
     process->estado_processo = estado_processo;
+    process->terminal = terminal;
+
     process->pid = pid;
     process->quantum = 0;
-    process->terminal = terminal;
+    process->prioridade = 0.5f;
+    process->exec_inicio = -1;
+
 
     return process;
 }

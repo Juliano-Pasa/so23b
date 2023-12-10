@@ -32,7 +32,9 @@ struct processo
     pr_state estado_processo;
     int pid;
     int terminal;
-    int quantum;
+    int quantum; 
+    int exec_inicio;
+    double prioridade;   
 };
 
 processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid, int terminal);
