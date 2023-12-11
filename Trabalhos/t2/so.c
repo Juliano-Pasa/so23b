@@ -32,6 +32,7 @@ struct so_t {
   mmu_t *mmu;
   console_t *console;
   relogio_t *relogio;
+  mem_sec_t *mem_sec;
 
   escalonador_t* escalonador;
   int pid_atual;
@@ -43,9 +44,6 @@ struct so_t {
   // quando tiver memória virtual, o controle de memória livre e ocupada
   //   é mais completo que isso
   int quadro_livre;
-  // quando tiver processos, não tem essa tabela aqui, tem que tem uma para
-  //   cada processo
-  tabpag_t *tabpag;
 };
 
 
@@ -53,9 +51,9 @@ struct so_t {
 static err_t so_trata_interrupcao(void *argC, int reg_A);
 
 // funções auxiliares
-static int so_carrega_programa(so_t *self, char *nome_do_executavel);
+static int so_salva_programa(so_t *self, char *nome_do_executavel);
 static bool so_copia_str_do_processo(so_t *self, int tam, char str[tam],
-                                     int end_virt/*, processo*/);
+                                     int end_virt, processo* process);
 
 // funções auxiliares gerais
 static void reseta_processos(so_t *self);
@@ -64,10 +62,10 @@ static void libera_bloqueio(so_t *self, processo* process);
 static processo* busca_processo(so_t *self, int pid);
 static int busca_indice_processo(so_t *self, int pid);
 static int encontra_terminal_livre(so_t *self);
-
+static void so_carrega_programa(so_t *self, processo* process);
 
 so_t *so_cria(cpu_t *cpu, mem_t *mem, mmu_t *mmu,
-              console_t *console, relogio_t *relogio)
+              console_t *console, relogio_t *relogio, mem_sec_t *mem_sec)
 {
   so_t *self = malloc(sizeof(*self));
   if (self == NULL) return NULL;
@@ -77,6 +75,7 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mmu_t *mmu,
   self->mmu = mmu;
   self->console = console;
   self->relogio = relogio;
+  self->mem_sec = mem_sec;
 
   // quando a CPU executar uma instrução CHAMAC, deve chamar a função
   //   so_trata_interrupcao
@@ -94,16 +93,12 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, mmu_t *mmu,
   //   colocamos a instrução RETI, para que a CPU retorne da interrupção
   //   (recuperando seu estado no endereço 0) depois que o SO retornar de
   //   so_trata_interrupcao.
-  mem_escreve(self->mem, 10, CHAMAC);
-  mem_escreve(self->mem, 11, RETI);
+  mmu_escreve(self->mmu, 10, CHAMAC, supervisor);
+  mmu_escreve(self->mmu, 11, RETI, supervisor);
 
   // programa o relógio para gerar uma interrupção após INTERVALO_INTERRUPCAO
   rel_escr(self->relogio, 2, INTERVALO_INTERRUPCAO);
 
-  // inicializa a tabela de páginas global, e entrega ela para a MMU
-  // com processos, essa tabela não existiria, teria uma por processo
-  self->tabpag = tabpag_cria();
-  mmu_define_tabpag(self->mmu, self->tabpag);
   // define o primeiro quadro livre de memória como o seguinte àquele que
   //   contém o endereço 99 (as 100 primeiras posições de memória (pelo menos)
   //   não vão ser usadas por programas de usuário)
@@ -147,15 +142,10 @@ static err_t so_trata_interrupcao(void *argC, int reg_A)
   irq_t irq = reg_A;
   err_t err;
   console_printf(self->console, "SO: recebi IRQ %d (%s)", irq, irq_nome(irq));
-  // salva o estado da cpu no descritor do processo que foi interrompido
   so_salva_estado_da_cpu(self);
-  // faz o atendimento da interrupção
   err = so_trata_irq(self, irq);
-  // faz o processamento independente da interrupção
   so_trata_pendencias(self);
-  // escolhe o próximo processo a executar
   so_escalona(self);
-  // recupera o estado do processo escolhido
   so_despacha(self);
   return err;
 }
@@ -168,15 +158,17 @@ static void so_salva_estado_da_cpu(so_t *self)
   }
   processo* process = self->tab_processos[self->processo_atual];
 
-  mem_le(self->mem, IRQ_END_PC, &(process->estado_cpu->PC));
-  mem_le(self->mem, IRQ_END_A, &(process->estado_cpu->A));
-  mem_le(self->mem, IRQ_END_X, &(process->estado_cpu->X));
-  mem_le(self->mem, IRQ_END_complemento, &(process->estado_cpu->complemento));
+  mmu_le(self->mmu, IRQ_END_PC, &(process->estado_cpu->PC), supervisor);
+  mmu_le(self->mmu, IRQ_END_A, &(process->estado_cpu->A), supervisor);
+  mmu_le(self->mmu, IRQ_END_X, &(process->estado_cpu->X), supervisor);
+  mmu_le(self->mmu, IRQ_END_complemento, &(process->estado_cpu->complemento), supervisor);
+
+  console_printf(self->console, "Valor do PC sendo carregado no processo %d", process->estado_cpu->PC);
 
   int err_int;
   int modo_int;
-  mem_le(self->mem, IRQ_END_erro, &err_int);
-  mem_le(self->mem, IRQ_END_modo, &modo_int);
+  mmu_le(self->mmu, IRQ_END_erro, &err_int, supervisor);
+  mmu_le(self->mmu, IRQ_END_modo, &modo_int, supervisor);
 
   err_t erro = err_int;
   cpu_modo_t modo = modo_int;
@@ -198,6 +190,9 @@ static void so_trata_pendencias(so_t *self)
     if (self->tab_processos[i]->estado_processo == BLOCKED) libera_bloqueio(self, self->tab_processos[i]);
   }
 }
+// Aqui no escalona provavelmente vai ter q ter alguma atualizacao
+// na mmu, pois se o processo for alterado, outra tabela de paginas
+// sera utilizada pelo processador.
 static void so_escalona(so_t *self)
 {
   
@@ -219,36 +214,38 @@ static void so_escalona(so_t *self)
   while(NULL != processo_candidato)
   {
       if (processo_candidato->estado_processo != READY)
-      {        
-        //console_printf(self->console, "Escalonador me retornou nulo, mas que filho da puta.");
+      {
         escalonador_enfila_processo(processo_candidato, self->escalonador);
         processo_candidato = escalonador_desenfila_processo(self->escalonador);
         continue;
       }
 
       self->processo_atual = busca_indice_processo(self, processo_candidato->pid);
-      self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;    
+      self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;
+      mmu_define_tabpag(self->mmu, self->tab_processos[self->processo_atual]->tabpag);
 
       return;
   }
   self->processo_atual = -1;
 }
+
 static void so_despacha(so_t *self)
 {
   if (self->processo_atual == -1)
   {
-    mem_escreve(self->mem, IRQ_END_erro, ERR_CPU_PARADA);
+    mmu_escreve(self->mmu, IRQ_END_erro, ERR_CPU_PARADA, supervisor);
     return;
   }
+
   
   processo* process = self->tab_processos[self->processo_atual];
 
-  mem_escreve(self->mem, IRQ_END_PC, process->estado_cpu->PC);
-  mem_escreve(self->mem, IRQ_END_A, process->estado_cpu->A);
-  mem_escreve(self->mem, IRQ_END_X, process->estado_cpu->X);
-  mem_escreve(self->mem, IRQ_END_erro, process->estado_cpu->erro);
-  mem_escreve(self->mem, IRQ_END_complemento, process->estado_cpu->complemento);
-  mem_escreve(self->mem, IRQ_END_PC, process->estado_cpu->PC);
+  mmu_escreve(self->mmu, IRQ_END_PC, process->estado_cpu->PC, supervisor);
+  mmu_escreve(self->mmu, IRQ_END_A, process->estado_cpu->A, supervisor);
+  mmu_escreve(self->mmu, IRQ_END_X, process->estado_cpu->X, supervisor);
+  mmu_escreve(self->mmu, IRQ_END_erro, process->estado_cpu->erro, supervisor);
+  mmu_escreve(self->mmu, IRQ_END_complemento, process->estado_cpu->complemento, supervisor);
+  mmu_escreve(self->mmu, IRQ_END_modo, process->estado_cpu->modo, supervisor);
 }
 
 static err_t so_trata_irq(so_t *self, int irq)
@@ -275,20 +272,27 @@ static err_t so_trata_irq(so_t *self, int irq)
 
 static err_t so_trata_irq_reset(so_t *self)
 {
-  int ender = so_carrega_programa(self, "init.maq");
+  int ender = so_salva_programa(self, "init.maq");
+
+  if (ender == -1)
+  {
+    return ERR_CPU_PARADA;
+  }
 
   reseta_processos(self);
   self->processo_atual = 0;
 
   int terminal = encontra_terminal_livre(self);
 
-  self->tab_processos[self->processo_atual] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal);
+  self->tab_processos[self->processo_atual] = cria_processo(ender, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal, "init.maq");
   processo* process = self->tab_processos[self->processo_atual];
   (self->uso_terminais[terminal])++;
 
-  mem_escreve(self->mem, IRQ_END_PC, process->estado_cpu->PC);
-  mem_escreve(self->mem, IRQ_END_modo, process->estado_cpu->modo);
+  so_carrega_programa(self, process);
   
+  // Isso aq provavelmente vai dar problema
+  mmu_escreve(self->mmu, IRQ_END_PC, process->estado_cpu->PC, supervisor);
+  mmu_escreve(self->mmu, IRQ_END_modo, process->estado_cpu->modo, supervisor);  
   return ERR_OK;
 }
 
@@ -427,14 +431,14 @@ static void so_chamada_cria_proc(so_t *self)
 
   // em X está o endereço onde está o nome do arquivo
   int ender_proc = process->estado_cpu->X;
-  char nome[100];
-  if (so_copia_str_do_processo(self, 100, nome, ender_proc)) {
-    int ender_carga = so_carrega_programa(self, nome);
+  char *nome = malloc(100 * sizeof(char));
+  if (so_copia_str_do_processo(self, 100, nome, ender_proc, process)) {
+    int ender_carga = so_salva_programa(self, nome);
     if (ender_carga != -1) {      
       int terminal = encontra_terminal_livre(self);
       (self->uso_terminais[terminal])++;
 
-      self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal);
+      self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal, nome);
       escalonador_enfila_processo(self->tab_processos[posicao_processo], self->escalonador);
       process->estado_cpu->A = self->pid_atual;
 
@@ -498,8 +502,14 @@ static void so_chamada_espera_proc(so_t *self)
 //   as páginas serão colocadas na memória principal por demanda.
 //   para simplificar ainda mais, a memória secundária pode ser alocada
 //   da forma como a principal está sendo alocada aqui (sem reuso)
-static int so_carrega_programa(so_t *self, char *nome_do_executavel)
+static int so_salva_programa(so_t *self, char *nome_do_executavel)
 {
+  if (mem_sec_existe_programa(self->mem_sec, nome_do_executavel))
+  {
+    console_printf(self->console, "Programa '%s' ja salvo em memoria secundaria\n", nome_do_executavel);
+    return 0;
+  }
+
   // programa para executar na nossa CPU
   programa_t *prog = prog_cria(nome_do_executavel);
   if (prog == NULL) {
@@ -508,52 +518,30 @@ static int so_carrega_programa(so_t *self, char *nome_do_executavel)
     return -1;
   }
 
-  int end_virt_ini = prog_end_carga(prog);
-  int end_virt_fim = end_virt_ini + prog_tamanho(prog) - 1;
-  int pagina_ini = end_virt_ini / TAM_PAGINA;
-  int pagina_fim = end_virt_fim / TAM_PAGINA;
-  int quadro_ini = self->quadro_livre;
-  // mapeia as páginas nos quadros
-  int quadro = quadro_ini;
-  for (int pagina = pagina_ini; pagina <= pagina_fim; pagina++) {
-    tabpag_define_quadro(self->tabpag, pagina, quadro);
-    quadro++;
-  }
-  self->quadro_livre = quadro;
-
-  // carrega o programa na memória principal
-  int end_fis_ini = quadro_ini * TAM_PAGINA;
-  int end_fis = end_fis_ini;
-  for (int end_virt = end_virt_ini; end_virt <= end_virt_fim; end_virt++) {
-    if (mem_escreve(self->mem, end_fis, prog_dado(prog, end_virt)) != ERR_OK) {
-      console_printf(self->console,
-          "Erro na carga da memória, end virt %d fís %d\n", end_virt, end_fis);
-      return -1;
-    }
-    end_fis++;
-  }
+  int endereco_programa = mem_sec_salva_programa(self->mem_sec, prog, nome_do_executavel);
   prog_destroi(prog);
+
+  if (endereco_programa == -1)
+  {
+    console_printf(self->console, "SO: Erro ao salvar programa '%s'", nome_do_executavel);
+    return -1;
+  }
+
   console_printf(self->console,
-      "SO: carga de '%s' em V%d-%d F%d-%d", nome_do_executavel,
-                 end_virt_ini, end_virt_fim, end_fis_ini, end_fis - 1);
-  return end_virt_ini;
+      "SO: carga de '%s' em Disco em %d", nome_do_executavel, endereco_programa);
+  return endereco_programa;
 }
 
 // copia uma string da memória do processo para o vetor str.
 // retorna false se erro (string maior que vetor, valor não ascii na memória,
 //   erro de acesso à memória)
-// o endereço é um endereço virtual de um processo.
-// Com processos e memória virtual implementados, esta função deve também
-//   receber o processo como argumento
-// Cada valor do espaço de endereçamento do processo pode estar em memória
-//   principal ou secundária
 // O endereço é um endereço virtual de um processo.
 // Com processos e memória virtual implementados, esta função deve também
 //   receber o processo como argumento
 // Com memória virtual, cada valor do espaço de endereçamento do processo
 //   pode estar em memória principal ou secundária
 static bool so_copia_str_do_processo(so_t *self, int tam, char str[tam],
-                                     int end_virt/*, processo*/)
+                                     int end_virt, processo* process)
 {
   for (int indice_str = 0; indice_str < tam; indice_str++) {
     int caractere;
@@ -676,4 +664,48 @@ static int encontra_terminal_livre(so_t *self)
   }
 
   return idMenor;
+}
+
+static void so_carrega_programa(so_t *self, processo* process)
+{
+  mapa_valor_t *enderecos = mem_sec_pega_end_programa(self->mem_sec, process->nome);
+
+  int tamanho = enderecos->fim - enderecos->inicio + 1;
+  int end_v_inicio = 0;
+  int end_v_fim = tamanho - 1;
+
+  int pagina_inicio = end_v_inicio / TAM_PAGINA;
+  int pagina_fim = end_v_fim / TAM_PAGINA;
+  int quatro_atual = self->quadro_livre;
+
+  for (int pagina = pagina_inicio; pagina <= pagina_fim; pagina++)
+  {
+    tabpag_define_quadro(process->tabpag, pagina, quatro_atual);
+    quatro_atual++;
+  }
+  self->quadro_livre = quatro_atual;
+
+  mmu_define_tabpag(self->mmu, process->tabpag);
+
+  int valor;
+  for (int end_v = enderecos->inicio; end_v <= enderecos->fim; end_v++)
+  {
+    if (mem_sec_le(self->mem_sec, end_v, &valor) != ERR_OK)
+    {
+      console_printf(self->console,
+          "Erro na carga da memória secundaria no endereco %d \n", valor);
+      return;
+    }
+
+    int aux;
+    tabpag_traduz(process->tabpag, end_v, &aux);
+    console_printf(self->console, "Endereco V: %d F: %d", end_v, aux);
+
+    if (mmu_escreve(self->mmu, end_v, valor, usuario) != ERR_OK) 
+    {
+      console_printf(self->console,
+          "Erro na escrita na memória primaria no endereco V: %d\n", end_v);
+      return;
+    }
+  }
 }

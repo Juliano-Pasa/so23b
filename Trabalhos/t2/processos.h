@@ -2,6 +2,7 @@
 #define PROCESSOS_H
 
 #include "cpu.h"
+#include "tabpag.h"
 
 // Valores iniciais arbitrarios
 typedef enum
@@ -33,9 +34,12 @@ struct processo
     int pid;
     int terminal;
     int quantum;
+
+    char *nome;
+    tabpag_t *tabpag;
 };
 
-processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid, int terminal);
+processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid, int terminal, char *nome);
 void mata_processo(processo* processo);
 
 #endif

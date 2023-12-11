@@ -6,12 +6,14 @@
 #include "relogio.h"
 #include "console.h"
 #include "so.h"
+#include "mem_sec.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 
 // constantes
 #define MEM_TAM 10000        // tamanho da memória principal
+#define MEM_SEC_TAM 10000    // tamanho da memória secundária
 
 
 typedef struct {
@@ -22,12 +24,14 @@ typedef struct {
   console_t *console;
   es_t *es;
   controle_t *controle;
+  mem_sec_t *mem_sec;
 } hardware_t;
 
 void cria_hardware(hardware_t *hw)
 {
   // cria a memória e a MMU
   hw->mem = mem_cria(MEM_TAM);
+  hw->mem_sec = mem_sec_cria(MEM_SEC_TAM);
   hw->mmu = mmu_cria(hw->mem);
 
   // cria dispositivos de E/S
@@ -66,6 +70,7 @@ void destroi_hardware(hardware_t *hw)
   console_destroi(hw->console);
   mmu_destroi(hw->mmu);
   mem_destroi(hw->mem);
+  mem_sec_destroi(hw->mem_sec);
 }
 
 int main()
@@ -76,7 +81,7 @@ int main()
   // cria o hardware
   cria_hardware(&hw);
   // cria o sistema operacional
-  so = so_cria(hw.cpu, hw.mem, hw.mmu, hw.console, hw.relogio);
+  so = so_cria(hw.cpu, hw.mem, hw.mmu, hw.console, hw.relogio, hw.mem_sec);
   
   // executa o laço de execução da CPU
   controle_laco(hw.controle);

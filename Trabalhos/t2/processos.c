@@ -1,8 +1,7 @@
+#include <stdlib.h>
 #include "processos.h"
 
-#include <stdlib.h>
-
-processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid, int terminal)
+processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_modo_t modo, pr_state estado_processo, int pid, int terminal, char *nome)
 {
     processo* process = malloc(sizeof(processo));
     process->estado_cpu = malloc(sizeof(cpu_state));
@@ -18,6 +17,9 @@ processo* cria_processo(int PC, int A, int X, err_t erro, int complemento, cpu_m
     process->pid = pid;
     process->quantum = 0;
     process->terminal = terminal;
+
+    process->nome = nome;
+    process->tabpag = tabpag_cria();
 
     return process;
 }
