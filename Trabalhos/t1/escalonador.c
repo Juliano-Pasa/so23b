@@ -54,7 +54,7 @@ processo* escalonador_desenfila_processo(escalonador_t* esc)
 {
     if(esc->fila_prontos->raiz == NULL)
     {
-        printf("Escalonador retornou nulo, não havia um nó raiz de processo.");
+        //printf("Escalonador retornou nulo, não havia um nó raiz de processo.");
         return NULL;
     }
 
@@ -78,7 +78,7 @@ void escalonador_enfila_processo_prioridade(processo* p, escalonador_t* esc)
     }
 
     //Se a prioridae for maior que o primeiro nó da fila, atualiza
-    if(esc->fila_prontos->raiz->proc->prioridade < p->prioridade)
+    if(p->prioridade < esc->fila_prontos->raiz->proc->prioridade)
     {
         no_processo* antigo_primeiro = esc->fila_prontos->raiz;
         no_processo* novo_primeiro = cria_no(p);
@@ -109,20 +109,20 @@ static no_processo* fila_acha_lugar_prioridade(float prioridade, fila_processos*
     //Tratamento para listas sem elementos deve ser feito fora da função.
     if(no_p == NULL)
     {
-        printf("\nA fila está vazia, nao eh possivel encontrar o lugar. :C\n");
+        //printf("\nA fila está vazia, nao eh possivel encontrar o lugar. :C\n");
         return no_p;
     }
 
     //Valor menor de prioridader indica maior preferencia na execução.
     //Enquanto a prioridade atual for superior ou igual a prioridade buscada,
     //Esse igual garante que os processos com mesma prioridade sejam executados em ordem de chegada, :D
-    while(prioridade <= no_p->proc->prioridade)
+    while(prioridade >= no_p->proc->prioridade)
     {
         //Verifica se o próximo nó existe
         if(no_p->proximo_no)
         {
             //Achou o lugar onde deve ficar, a prioridade é MENOR do que o elemento antecessor e MAIOR do que do sucessor.
-            if(no_p->proximo_no->proc->prioridade < prioridade)
+            if(no_p->proximo_no->proc->prioridade > prioridade)
             {
                 //Retorna o nó atual, que tem o número de prioridade menor do que o nó que deve ser inserido
                 return no_p; 
@@ -150,7 +150,8 @@ static no_processo* fila_acha_fim(fila_processos* f)
 
     if(no_p == NULL)
     {
-        printf("\nA fila está vazia e buscaram o fim dela. :C\n");
+        return NULL;
+        //printf("\nA fila está vazia e buscaram o fim dela. :C\n");
     }
 
     while(no_p->proximo_no != NULL)
@@ -175,4 +176,21 @@ static no_processo* cria_no(processo* p)
 static void libera_no(no_processo* no_p)
 {
     free(no_p);
+}
+
+
+void imprimir_lista(escalonador_t* esc)
+{
+    no_processo* no_p = esc->fila_prontos->raiz;
+
+    int i = 0;
+    while(no_p != NULL)
+    {
+        i++;
+        printf("\nElemento %i da lista | PID: %i | Prioridade %f.", i, no_p->proc->pid, no_p->proc->prioridade);
+
+        if(no_p->proximo_no == NULL) break;
+
+        no_p = no_p->proximo_no;
+    }
 }

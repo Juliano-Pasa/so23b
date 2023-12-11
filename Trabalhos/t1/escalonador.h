@@ -39,3 +39,5 @@ processo* escalonador_desenfila_processo(escalonador_t* esc);  //Remove o primei
 //Considera prioridades, como o pop sempre tira o primeiro, caso os processos só sejam inseridos com prioridade.
 //SEMPRE o processo com menor valor de prioridade será escolhido.
 void escalonador_enfila_processo_prioridade(processo* p, escalonador_t* esc);
+
+void imprimir_lista(escalonador_t* esc);
