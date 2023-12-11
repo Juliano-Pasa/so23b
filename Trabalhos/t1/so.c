@@ -205,7 +205,9 @@ static void so_escalona(so_t *self)
   {
     //Enquanto o quantum não tá zerado, só ignora.
     if((self->tab_processos[self->processo_atual])->quantum > 0)
+    {      
       return;
+    }
 
 
     if(CONSIDERA_PRIORIDADE)
@@ -242,8 +244,9 @@ static void so_escalona(so_t *self)
   
   self->processo_atual = busca_indice_processo(self, processo_candidato->pid);
   self->tab_processos[self->processo_atual]->quantum = DEFAULT_QUANTUM_SIZE;  
-  int agr = rel_agora(self->relogio);
 
+  // ERROR_COMP: Diferença
+  int agr = rel_agora(self->relogio);
   self->tab_processos[self->processo_atual]->exec_inicio = agr;
 
   //printf("\nFFFFFFFFFFFFFF %i", self->processo_atual);
