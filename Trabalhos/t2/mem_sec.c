@@ -51,7 +51,7 @@ int mem_sec_salva_programa(mem_sec_t *self, programa_t *prog, char *nome)
     mapea_programa(self, nome, end_inicio + self->inicio, end_fim + self->inicio);
     self->inicio += prog_tamanho(prog);
 
-    return end_inicio;
+    return self->inicio;
 }
 
 void mapea_programa(mem_sec_t* self, char *nome, int inicio, int fim)

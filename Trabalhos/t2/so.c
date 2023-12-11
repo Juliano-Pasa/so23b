@@ -163,8 +163,6 @@ static void so_salva_estado_da_cpu(so_t *self)
   mmu_le(self->mmu, IRQ_END_X, &(process->estado_cpu->X), supervisor);
   mmu_le(self->mmu, IRQ_END_complemento, &(process->estado_cpu->complemento), supervisor);
 
-  console_printf(self->console, "Valor do PC sendo carregado no processo %d", process->estado_cpu->PC);
-
   int err_int;
   int modo_int;
   mmu_le(self->mmu, IRQ_END_erro, &err_int, supervisor);
@@ -177,12 +175,6 @@ static void so_salva_estado_da_cpu(so_t *self)
 }
 static void so_trata_pendencias(so_t *self)
 {
-  // realiza ações que não são diretamente ligadar com a interrupção que
-  //   está sendo atendida:
-  // - E/S pendente
-  // - desbloqueio de processos
-  // - contabilidades
-
   for (int i = 0; i < TAMANHO_TABELA; i++)
   {
     if (self->tab_processos[i] == NULL) continue;
@@ -190,12 +182,9 @@ static void so_trata_pendencias(so_t *self)
     if (self->tab_processos[i]->estado_processo == BLOCKED) libera_bloqueio(self, self->tab_processos[i]);
   }
 }
-// Aqui no escalona provavelmente vai ter q ter alguma atualizacao
-// na mmu, pois se o processo for alterado, outra tabela de paginas
-// sera utilizada pelo processador.
+
 static void so_escalona(so_t *self)
-{
-  
+{  
   if(self->processo_atual >= 0)
   {
     if((self->tab_processos[self->processo_atual])->quantum > 0)
@@ -204,11 +193,6 @@ static void so_escalona(so_t *self)
     escalonador_enfila_processo(self->tab_processos[self->processo_atual], self->escalonador);
   }
 
-
-  //Pede pro escalonador até achar um processo ready.
-  //O escalonador assume que os processos na lista dele estao ready, mas na verdade ele guarda todos os processos.
-  
-  //console_printf(self->console, "Escalonador em ação");
   processo* processo_candidato = NULL; 
   processo_candidato = escalonador_desenfila_processo(self->escalonador);
   while(NULL != processo_candidato)
@@ -235,8 +219,7 @@ static void so_despacha(so_t *self)
   {
     mmu_escreve(self->mmu, IRQ_END_erro, ERR_CPU_PARADA, supervisor);
     return;
-  }
-
+  } 
   
   processo* process = self->tab_processos[self->processo_atual];
 
@@ -290,7 +273,6 @@ static err_t so_trata_irq_reset(so_t *self)
 
   so_carrega_programa(self, process);
   
-  // Isso aq provavelmente vai dar problema
   mmu_escreve(self->mmu, IRQ_END_PC, process->estado_cpu->PC, supervisor);
   mmu_escreve(self->mmu, IRQ_END_modo, process->estado_cpu->modo, supervisor);  
   return ERR_OK;
@@ -306,8 +288,19 @@ static err_t so_trata_irq_err_cpu(so_t *self)
   //   no descritor do processo corrente, e reagir de acordo com esse erro
   //   (em geral, matando o processo)
 
+  if (self->processo_atual == -1)
+  {
+    console_printf(self->console, "Erro de cpu com nenhum processo atual");
+    return ERR_CPU_PARADA;
+  }
+
   processo* process = self->tab_processos[self->processo_atual];
   err_t err = process->estado_cpu->erro;
+  if (err == ERR_OK)
+  {
+    return ERR_OK;
+  }
+
   console_printf(self->console,
       "SO: Erro na CPU: %s", err_nome(err));
 
@@ -352,6 +345,12 @@ static void so_chamada_espera_proc(so_t *self);
 
 static err_t so_trata_chamada_sistema(so_t *self)
 {
+  if (self->processo_atual == -1)
+  {
+    console_printf(self->console, "Nao tem nenhum processo mas veio uma chamada de sistema");
+    return ERR_OK;
+  }
+
   int id_chamada = (self->tab_processos[self->processo_atual])->estado_cpu->A;
   
   console_printf(self->console, "SO: chamada de sistema %d", id_chamada);
@@ -399,8 +398,7 @@ static void so_chamada_le(so_t *self)
 }
 
 static void so_chamada_escr(so_t *self)
-{
-  
+{  
   processo* process = self->tab_processos[self->processo_atual];  
   int terminal_inicio = process->terminal * 4;
   int estado;  
@@ -436,9 +434,11 @@ static void so_chamada_cria_proc(so_t *self)
     int ender_carga = so_salva_programa(self, nome);
     if (ender_carga != -1) {      
       int terminal = encontra_terminal_livre(self);
-      (self->uso_terminais[terminal])++;
 
       self->tab_processos[posicao_processo] = cria_processo(ender_carga, 0, 0, ERR_OK, 0, usuario, READY, self->pid_atual, terminal, nome);
+      (self->uso_terminais[terminal])++;
+      so_carrega_programa(self, self->tab_processos[posicao_processo]);
+
       escalonador_enfila_processo(self->tab_processos[posicao_processo], self->escalonador);
       process->estado_cpu->A = self->pid_atual;
 
@@ -529,7 +529,7 @@ static int so_salva_programa(so_t *self, char *nome_do_executavel)
 
   console_printf(self->console,
       "SO: carga de '%s' em Disco em %d", nome_do_executavel, endereco_programa);
-  return endereco_programa;
+  return 0;
 }
 
 // copia uma string da memória do processo para o vetor str.
@@ -590,18 +590,6 @@ static void libera_espera(so_t *self, processo* process)
   escalonador_enfila_processo(process, self->escalonador);
 }
 
-// PROVAVELMENTE PRECISA SER REFATORADA!
-// Somente processos bloqueados entraram nessa funcao.
-// A gente tem q encontrar alguma forma de identificar o motivo
-// do bloqueio de um processo, pra gente conseguir verificar se a causa
-// desse bloqueio ja foi resolvida, e entao desbloquear ele.
-//
-// Uma ideia que eu tive é o SO armazenar os processos bloqueados
-// junto com um identificador. Seria um vetor de pares (processo, bloqueio).
-// Dessa forma, da pra identificar o que bloqueou o processo e tratar isso na hora
-// de liberar ele. 
-//
-// Outra opcao eh adicionar mais um campo no processo, identificando porque ele foi bloqueado.
 static void libera_bloqueio(so_t *self, processo* process)
 {
   console_printf(self->console, "SO: Tentando liberar processo %d", process->pid);
@@ -612,11 +600,6 @@ static void libera_bloqueio(so_t *self, processo* process)
   term_le(self->console, inicio_terminal + 1, &estadoLeitura);
   term_le(self->console, inicio_terminal + 3, &estadoEscrita);
 
-  // So esta sendo considerado o desbloqueio de processos que foram
-  // bloqueados por nao conseguir escrever.
-  // Se esse processo poder ser desbloqueado, entao eh necessario fazer a
-  // escrita do caracter que tinha sido bloqueado, por isso term_escr eh chamado
-  // dentro desse if.
   if (estadoEscrita != 0)
   {
     term_escr(self->console, inicio_terminal + 2, process->estado_cpu->X);
@@ -698,14 +681,18 @@ static void so_carrega_programa(so_t *self, processo* process)
     }
 
     int aux;
-    tabpag_traduz(process->tabpag, end_v, &aux);
-    console_printf(self->console, "Endereco V: %d F: %d", end_v, aux);
+    tabpag_traduz(process->tabpag, end_v_inicio, &aux);
+    console_printf(self->console, "Endereco V: %d F: %d", end_v_inicio, aux);
 
-    if (mmu_escreve(self->mmu, end_v, valor, usuario) != ERR_OK) 
+    if (mmu_escreve(self->mmu, end_v_inicio, valor, usuario) != ERR_OK) 
     {
       console_printf(self->console,
-          "Erro na escrita na memória primaria no endereco V: %d\n", end_v);
+          "Erro na escrita na memoria primaria no endereco V: %d\n", end_v_inicio);
       return;
     }
+    end_v_inicio++;
   }
+
+  mmu_define_tabpag(self->mmu, self->tab_processos[self->processo_atual]->tabpag);
+  console_printf(self->console, "Processo %d carregado na memoria principal", process->pid);
 }
